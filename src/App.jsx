@@ -31,7 +31,7 @@ const App = () => {
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
         />
-        <Route
+        <Route 
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
