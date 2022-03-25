@@ -4,7 +4,7 @@ import NavBar from '../../components/NavBar/NavBar'
 const Landing = ({ user, handleLogout }) => {
 
     return (
-    <main className='card full-page-card column-container yellowbg'>
+    <main className='card full-page-card column-container whitebg'>
       {user ? 
         <>
           <NavBar user={user} handleLogout={handleLogout} />
