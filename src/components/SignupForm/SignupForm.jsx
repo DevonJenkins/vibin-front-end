@@ -124,6 +124,7 @@ const SignupForm = props => {
         </label>
         <input
           type="text"
+          pattern="[0-9]*"
           autoComplete="off"
           id="zip"
           value={zip}
