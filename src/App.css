@@ -1,14 +1,53 @@
 :root {
-  --black: 
+  --black: #0a0903;
+  --red: #ff0000;
+  --blue: #3185fc;
+  --yellow: #ffc100;
+  --white: #edf2f4;
 }
 
 .App {
   text-align: center;
 }
 
+
+
 body {
   height: 100vh;
   width: 100vw;
+}
+
+.blackbg{
+  background-color: var(--black);
+}
+
+.redbg{
+  background-color: var(--red);
+}
+
+.bluebg{
+  background-color: var(--blue);
+}
+
+.whitebg{
+  background-color: var(--white);
+}
+.yellowbg{
+  background-color: var(--yellow);
+}
+
+.nobg{
+  background-color: transparent;
+}
+
+.whitefnt {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whitebrdr {
+  border: 2px var(--white) solid;
 }
 
 .column-container {
