@@ -11,6 +11,8 @@ const SignupForm = props => {
     password: '',
     passwordConf: '',
     avatar: '',
+    instruments: '',
+    zip: '',
   })
 
   const handleChange = e => {
@@ -32,7 +34,7 @@ const SignupForm = props => {
     }
   }
 
-  const { name, email, password, passwordConf, avatar } = formData
+  const { name, email, password, passwordConf, avatar, instruments, zip } = formData
 
   const isFormInvalid = () => {
     return !(name && email && password && password === passwordConf)
@@ -101,6 +103,33 @@ const SignupForm = props => {
           value={avatar}
           name="avatar"
           onChange={handleChange}
+        />
+      </div>
+      <div className={styles.inputContainer}>
+        <label htmlFor="instruments" className={styles.label}>
+          What instument/s do you play?
+        </label>
+        <input
+          type="text"
+          autoComplete="off"
+          id="instruments"
+          value={instruments}
+          name="instruments"
+          onChange={handleChange}
+        />
+      </div>
+      <div className={styles.inputContainer}>
+        <label htmlFor="zip" className={styles.label}>
+          Where are you located?
+        </label>
+        <input
+          type="text"
+          autoComplete="off"
+          id="zip"
+          value={zip}
+          name="zip"
+          onChange={handleChange}
+          placeholder="Zip Code"
         />
       </div>
       <div className={styles.inputContainer}>
