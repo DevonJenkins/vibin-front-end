@@ -106,9 +106,9 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
+      {/* <div className={styles.inputContainer}>
         <label htmlFor="instruments" className={styles.label}>
-          What instument/s do you play?
+          What instrument/s do you play?
         </label>
         <input
           type="text"
@@ -118,7 +118,7 @@ const SignupForm = props => {
           name="instruments"
           onChange={handleChange}
         />
-      </div>
+      </div> */}
       <div className={styles.inputContainer}>
         <label htmlFor="zip" className={styles.label}>
           Where are you located?
