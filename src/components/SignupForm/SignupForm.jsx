@@ -13,6 +13,7 @@ const SignupForm = props => {
     avatar: '',
     instruments: '',
     zip: '',
+    status: '',
   })
 
   const handleChange = e => {
@@ -34,7 +35,7 @@ const SignupForm = props => {
     }
   }
 
-  const { name, email, password, passwordConf, avatar, instruments, zip } = formData
+  const { name, email, password, passwordConf, avatar, instruments, zip, status } = formData
 
   const isFormInvalid = () => {
     return !(name && email && password && password === passwordConf)
@@ -131,6 +132,22 @@ const SignupForm = props => {
           onChange={handleChange}
           placeholder="Zip Code"
         />
+      </div>
+      <div className={styles.inputContainer}>
+        <label htmlFor="status" className={styles.label}>
+          What is your band status? 
+        </label>
+        <select
+          type="text"
+          autoComplete="off"
+          id="status"
+          value={status}
+          name="status"
+          onChange={handleChange}
+        >
+            <option value="seeking-band">Seeking Band</option>
+            <option value="seeking-band-members">Band Owner Seeking Members</option>
+          </select>
       </div>
       <div className={styles.inputContainer}>
         <button disabled={isFormInvalid()} className={styles.button}>
