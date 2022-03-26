@@ -53,6 +53,11 @@ body {
   border: 2px var(--white) solid;
 }
 
+button:disabled {
+  color: var(--red);
+  border: 2px var(--red) solid;
+}
+
 .column-container {
   display: flex;
   flex-direction: column;

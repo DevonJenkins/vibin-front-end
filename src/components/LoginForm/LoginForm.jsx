@@ -29,7 +29,6 @@ const LoginForm = props => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className='{styles.container}'
     >
       <table cellPadding={5}>
         <tbody>
