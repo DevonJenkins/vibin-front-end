@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
 
 const SignupForm = props => {
@@ -45,10 +44,10 @@ const SignupForm = props => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
+      className='{styles.container}'
     >
-      <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>Name</label>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="name" className='{styles.label}'>Name</label>
         <input
           type="text"
           autoComplete="off"
@@ -58,8 +57,8 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="email" className='{styles.label}'>Email</label>
         <input
           type="text"
           autoComplete="off"
@@ -69,8 +68,8 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="password" className='{styles.label}'>Password</label>
         <input
           type="password"
           autoComplete="off"
@@ -80,8 +79,8 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="confirm" className='{styles.label}'>
           Confirm Password
         </label>
         <input
@@ -93,8 +92,8 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="avatar" className={styles.label}>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="avatar" className='{styles.label}'>
           Profile Photo
         </label>
         <input
@@ -106,9 +105,9 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      {/* <div className={styles.inputContainer}>
-        <label htmlFor="instruments" className={styles.label}>
-          What instrument/s do you play?
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="instruments" className='{styles.label}'>
+          What instument/s do you play?
         </label>
         <input
           type="text"
@@ -118,9 +117,9 @@ const SignupForm = props => {
           name="instruments"
           onChange={handleChange}
         />
-      </div> */}
-      <div className={styles.inputContainer}>
-        <label htmlFor="zip" className={styles.label}>
+      </div>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="zip" className='{styles.label}'>
           Where are you located?
         </label>
         <input
@@ -134,8 +133,8 @@ const SignupForm = props => {
           placeholder="Zip Code"
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="status" className={styles.label}>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="status" className='{styles.label}'>
           What is your band status? 
         </label>
         <select
@@ -150,8 +149,8 @@ const SignupForm = props => {
             <option value="seeking-band-members">Band Owner Seeking Members</option>
           </select>
       </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>
+      <div className='{styles.inputContainer}'>
+        <button disabled={isFormInvalid()} className='{styles.button}'>
           Sign Up
         </button>
         <Link to="/">
