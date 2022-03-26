@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import SignupForm from '../../components/SignupForm/SignupForm'
-import styles from './Signup.module.css'
 
 const Signup = props => {
   const [message, setMessage] = useState([''])
@@ -10,10 +9,14 @@ const Signup = props => {
   }
 
   return (
-    <main className={styles.container}>
-      <h1>Sign Up</h1>
-      <p>{message}</p>
-      <SignupForm {...props} updateMessage={updateMessage} />
+    <main className='card full-page-card column-container whitebg'>
+      <div className='card edge-card column-container bluebg'>
+        <div>
+          <h1 className='whitefnt'>Sign Up</h1>
+          <p className='alertfnt'>{message}</p>
+          <SignupForm {...props} updateMessage={updateMessage} />
+        </div>
+      </div>
     </main>
   )
 }

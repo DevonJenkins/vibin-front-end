@@ -1,3 +1,111 @@
+:root {
+  --black: #0a0903;
+  --red: #ff0000;
+  --blue: #3185fc;
+  --yellow: #ffc100;
+  --white: #edf2f4;
+}
+
 .App {
   text-align: center;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.blackbg{
+  background-color: var(--black);
+}
+
+.redbg{
+  background-color: var(--red);
+}
+
+.bluebg{
+  background-color: var(--blue);
+}
+
+.whitebg{
+  background-color: var(--white);
+}
+.yellowbg{
+  background-color: var(--yellow);
+}
+
+.nobg{
+  background-color: transparent;
+}
+
+.whitefnt {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.alertfnt {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.whitebrdr {
+  border: 2px var(--white) solid;
+}
+
+button:disabled {
+  color: var(--red);
+  border: 2px var(--red) solid;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.full-page-card {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+}
+
+.border-card {
+  margin: 5vw;
+}
+
+.edge-card {
+  height: 95vh;
+  width: 95vw;
+}
+
+.center-card {
+  margin: 5vw
+}
+
+.margin-top{
+margin: 5vh;
+}
+
+.margin-2 {
+  margin: 2vw
+}
+.padding-2 {
+  padding: 2vw;
+}
+
+.br {
+  border-radius: 10%;
+}
+
+.landing-logo {
+  width: 80vw;
 }

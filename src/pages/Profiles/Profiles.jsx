@@ -12,6 +12,13 @@ const Profiles = () => {
   return (
     <>
       <h1>Hello. This is a list of all the profiles.</h1>
+      {/* if user, then show the users profile 
+          if bandowner, show profile of all members in band, and band profile
+          if status = band owner then show all members in band
+          if status = looking for a band, then only show your own profile
+          if admin, show all\
+          admin will not be tied to status. Instead it will be tied to an id or something. I don't remember exactly how this works but its similar to userid as I recall. 
+          */}
       {profiles.length ? 
         <>
           {profiles.map(profile=>

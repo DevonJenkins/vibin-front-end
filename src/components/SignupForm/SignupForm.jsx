@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './SignupForm.module.css'
 import * as authService from '../../services/authService'
 
 const SignupForm = props => {
@@ -24,10 +23,6 @@ const SignupForm = props => {
     })
   }
 
-  const handleChangePhoto = (evt) => {
-    setFormData({...formData, photo: evt.target.files[0]})
-  }
-
   const handleSubmit = async e => {
     e.preventDefault()
     try {
@@ -49,10 +44,10 @@ const SignupForm = props => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
+      className='{styles.container}'
     >
-      <div className={styles.inputContainer}>
-        <label htmlFor="name" className={styles.label}>Name</label>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="name" className='{styles.label}'>Name</label>
         <input
           type="text"
           autoComplete="off"
@@ -62,8 +57,8 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="email" className='{styles.label}'>Email</label>
         <input
           type="text"
           autoComplete="off"
@@ -73,8 +68,8 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="password" className='{styles.label}'>Password</label>
         <input
           type="password"
           autoComplete="off"
@@ -84,8 +79,8 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="confirm" className='{styles.label}'>
           Confirm Password
         </label>
         <input
@@ -97,20 +92,21 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="avatar" className={styles.label}>
-          Upload Photo
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="avatar" className='{styles.label}'>
+          Profile Photo
         </label>
         <input
-          type="file"
+          type="text"
+          autoComplete="off"
           id="avatar"
           value={avatar}
           name="avatar"
-          onChange={handleChangePhoto}
+          onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="instruments" className={styles.label}>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="instruments" className='{styles.label}'>
           What instument/s do you play?
         </label>
         <input
@@ -122,12 +118,13 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="zip" className={styles.label}>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="zip" className='{styles.label}'>
           Where are you located?
         </label>
         <input
           type="text"
+          pattern="[0-9]*"
           autoComplete="off"
           id="zip"
           value={zip}
@@ -136,8 +133,8 @@ const SignupForm = props => {
           placeholder="Zip Code"
         />
       </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="status" className={styles.label}>
+      <div className='{styles.inputContainer}'>
+        <label htmlFor="status" className='{styles.label}'>
           What is your band status? 
         </label>
         <select
@@ -152,8 +149,8 @@ const SignupForm = props => {
             <option value="seeking-band-members">Band Owner Seeking Members</option>
           </select>
       </div>
-      <div className={styles.inputContainer}>
-        <button disabled={isFormInvalid()} className={styles.button}>
+      <div className='{styles.inputContainer}'>
+        <button disabled={isFormInvalid()} className='{styles.button}'>
           Sign Up
         </button>
         <Link to="/">

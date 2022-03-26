@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import styles from './LoginForm.module.css'
 import * as authService from '../../services/authService'
 
 const LoginForm = props => {
@@ -30,34 +29,37 @@ const LoginForm = props => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
     >
-      <div className={styles.inputContainer}>
-        <label htmlFor="email" className={styles.label}>Email</label>
-        <input
-          type="text"
-          autoComplete="off"
-          id="email"
-          value={formData.email}
-          name="email"
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
-        <input
-          type="password"
-          autoComplete="off"
-          id="password"
-          value={formData.pw}
-          name="pw"
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <button className={styles.button}>Log In</button>
-        <Link to="/">
-          <button>Cancel</button>
+      <table cellPadding={5}>
+        <tbody>
+          <tr>
+            <td className='whitefnt'>Email</td>
+            <td><input
+                type="text"
+                autoComplete="off"
+                id="email"
+                value={formData.email}
+                name="email"
+                onChange={handleChange}
+              /></td>
+          </tr>
+          <tr>
+            <td className='whitefnt'>Password</td>
+            <td><input
+              type="password"
+              autoComplete="off"
+              id="password"
+              value={formData.pw}
+              name="pw"
+              onChange={handleChange}
+            /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div className='margin-top'>
+        <button className='margin-2 br padding-2 whitebrdr whitefnt blackbg'>Log In</button>
+        <Link className='margin-2' to="/">
+          <button className='padding-2 br whitebrdr whitefnt blackbg'>Cancel</button>
         </Link>
       </div>
     </form>
