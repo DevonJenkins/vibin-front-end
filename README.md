@@ -2,11 +2,23 @@
 when the vibe needs to change
 
 # *Description* 
-Text
+Starting a band from scratch can be a struggle. Whether it be sifting through craigslist ads or wandering social media platforms, It's tough to find good musicians who share similar musical interests. That's where Vibin comes in. Vibin aims to ease to struggle of forming a band by providing a platform specifically tailored to fit the needs of those looking to join or start a band. Are you a band looking for a bass player? Are you a bass player looking
 
 ---
 # *MVP/Version Control*
-Text
+| MVP features |
+|--------------| 
+|feature| 
+|feature| 
+|feature| 
+|feature| 
+
+---
+# *Ice Box*
+| Features to add in the future | 
+| ----------- | 
+| Header | 
+| Paragraph | 
 
 ---
 
@@ -39,13 +51,13 @@ Badges
 Pictures
 
 ---
-# *Ice Box*
-Text
 
----
 # *Planning Materials*
 Text 
 
 ---
 
 Credits to [Dave Collis](https://github.com/dcollis92#technologies--tools) for these super clean looking badges. 
+
+
+
