@@ -34,6 +34,10 @@ const SignupForm = props => {
     }
   }
 
+  const handleChangePhoto = (evt) => {
+    setFormData({...formData, photo: evt.target.files[0]})
+  }
+
   const { name, email, password, passwordConf, avatar, instruments, zip, status } = formData
 
   const isFormInvalid = () => {
@@ -97,12 +101,11 @@ const SignupForm = props => {
           Profile Photo
         </label>
         <input
-          type="text"
-          autoComplete="off"
+          type="file"
           id="avatar"
           value={avatar}
           name="avatar"
-          onChange={handleChange}
+          onChange={handleChangePhoto}
         />
       </div>
       <div className='{styles.inputContainer}'>
