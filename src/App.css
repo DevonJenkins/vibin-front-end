@@ -44,6 +44,11 @@ body {
   font-weight: bold;
 }
 
+.alertfnt {
+  color: var(--red);
+  text-decoration: none;
+}
+
 .whitebrdr {
   border: 2px var(--white) solid;
 }
@@ -80,8 +85,20 @@ body {
 .center-card {
   margin: 5vw
 }
+
+.margin-top{
+margin: 5vh;
+}
+
 .margin-2 {
   margin: 2vw
+}
+.padding-2 {
+  padding: 2vw;
+}
+
+.br {
+  border-radius: 10%;
 }
 
 .landing-logo {

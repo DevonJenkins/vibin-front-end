@@ -31,7 +31,7 @@ const LoginForm = props => {
       onSubmit={handleSubmit}
       className='{styles.container}'
     >
-      <table>
+      <table cellPadding={5}>
         <tbody>
           <tr>
             <td className='whitefnt'>Email</td>
@@ -57,10 +57,10 @@ const LoginForm = props => {
           </tr>
         </tbody>
       </table>
-      <div>
-        <button className='{styles.button}'>Log In</button>
-        <Link to="/">
-          <button>Cancel</button>
+      <div className='margin-top'>
+        <button className='margin-2 br padding-2 whitebrdr whitefnt blackbg'>Log In</button>
+        <Link className='margin-2' to="/">
+          <button className='padding-2 br whitebrdr whitefnt blackbg'>Cancel</button>
         </Link>
       </div>
     </form>
