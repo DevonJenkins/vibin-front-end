@@ -2,7 +2,7 @@
 when the vibe needs to change
 
 # *Description* 
-Starting a band from scratch can be a struggle. Whether it be sifting through craigslist ads or wandering social media platforms, It's tough to find good musicians who share similar musical interests. That's where Vibin comes in. Vibin aims to ease to struggle of forming a band by providing a platform specifically tailored to fit the needs of those looking to join or start a band. Are you a band looking for a bass player? Are you a bass player looking
+Starting a band from scratch can be a struggle. Whether it be sifting through craigslist ads or wandering social media platforms, It's tough to find good musicians who share similar musical interests. That's where Vibin comes in. Vibin aims to ease to struggle of forming a band by providing a platform specifically tailored to fit the needs of those looking to join or start a band. Are you a band looking for a bass player? Are you a bass player looking for your next band? Try Vibin to make your band/bandmate search a breeze. 
 
 ---
 # *MVP/Version Control*
