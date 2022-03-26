@@ -24,6 +24,10 @@ const SignupForm = props => {
     })
   }
 
+  const handleChangePhoto = (evt) => {
+    setFormData({...formData, photo: evt.target.files[0]})
+  }
+
   const handleSubmit = async e => {
     e.preventDefault()
     try {
@@ -95,15 +99,14 @@ const SignupForm = props => {
       </div>
       <div className={styles.inputContainer}>
         <label htmlFor="avatar" className={styles.label}>
-          Profile Photo
+          Upload Photo
         </label>
         <input
-          type="text"
-          autoComplete="off"
+          type="file"
           id="avatar"
           value={avatar}
           name="avatar"
-          onChange={handleChange}
+          onChange={handleChangePhoto}
         />
       </div>
       <div className={styles.inputContainer}>
