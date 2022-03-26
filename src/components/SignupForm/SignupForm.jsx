@@ -25,6 +25,10 @@ const SignupForm = props => {
 
   const handleSubmit = async e => {
     e.preventDefault()
+    const userFormData = new FormData()
+    userFormData.append('photo', formData.avatar)
+    userFormData.append('name', formData.name)
+    // props.handleAddUser(userFormData)
     try {
       await authService.signup(formData)
       props.handleSignupOrLogin()
