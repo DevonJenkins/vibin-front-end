@@ -25,6 +25,10 @@ const SignupForm = props => {
 
   const handleSubmit = async e => {
     e.preventDefault()
+    const userFormData = new FormData()
+    userFormData.append('photo', formData.avatar)
+    userFormData.append('name', formData.name)
+    // props.handleAddUser(userFormData)
     try {
       await authService.signup(formData)
       props.handleSignupOrLogin()
@@ -32,6 +36,10 @@ const SignupForm = props => {
     } catch (err) {
       props.updateMessage(err.message)
     }
+  }
+
+  const handleChangePhoto = (evt) => {
+    setFormData({...formData, photo: evt.target.files[0]})
   }
 
   const { name, email, password, passwordConf, avatar, instruments, zip, status } = formData
@@ -164,8 +172,8 @@ const SignupForm = props => {
         <button disabled={isFormInvalid()} className='margin-2 br padding-2 whitebrdr whitefnt blackbg'>
           Sign Up
         </button>
-        <Link className='margin-2' to="/">
-          <button className='padding-2 br whitebrdr whitefnt blackbg'>Cancel</button>
+        <Link to="/">
+          <button>Cancel</button>
         </Link>
       </div>
     </form>
