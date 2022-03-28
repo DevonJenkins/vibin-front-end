@@ -26,8 +26,12 @@ const Landing = ({ user, handleLogout }) => {
             <h6 className='whitefnt'>Welcome to Vibin!</h6>
             <p className='margin-2 whitefnt'>At Vibin we're trying to get you into a band with the best vibe possible! Lets get you started! </p>
           <div className='row-container'>
-            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/login">Log In</Link></div>
-            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/signup">Sign Up</Link></div>
+            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'>
+              <Link className='whitefnt' to="/login">Log In</Link>
+            </div>
+            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'>
+              <Link className='whitefnt' to="/signup">Sign Up</Link>
+            </div>
           </div>
         </div>
       }
