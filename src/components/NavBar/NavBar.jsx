@@ -15,6 +15,9 @@ const NavBar = ({ user, handleLogout }) => {
                 <a className="active whitefnt" aria-current="page" href="/">Home</a>
               </li>
               <li>
+                <Link className="active whitefnt" aria-current="page" to="/bands">Create a Band</Link>
+              </li>
+              <li>
                 <Link className="active whitefnt" aria-current="page" to="/genres">Add Genre</Link>
               </li>
               <li>
@@ -24,7 +27,7 @@ const NavBar = ({ user, handleLogout }) => {
                 <Link className="active whitefnt" aria-current="page" to="/changePassword">Change Password</Link>
               </li>
               <li>
-                <Link className="active whitefnt" to="/" aria-current="page" onClick={handleLogout}>Log Out</Link>
+                <Link className="active whitefnt" aria-current="page" to="/" onClick={handleLogout}>Log Out</Link>
               </li>
               </ul>
           </div>
