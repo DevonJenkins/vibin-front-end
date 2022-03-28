@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom'
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
-      {user ?
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#"></a>
+          <div></div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon white"></span>
           </button>
@@ -16,10 +15,13 @@ const NavBar = ({ user, handleLogout }) => {
                 <a className="active whitefnt" aria-current="page" href="/">Home</a>
               </li>
               <li>
-              <Link className="active whitefnt" aria-current="page" to="/changePassword">Change Password</Link>
+                <Link className="active whitefnt" aria-current="page" to="/genres">Add Genre</Link>
               </li>
               <li>
-                <Link className="active whitefnt" aria-current="page" to="" onClick={handleLogout}>Log Out</Link>
+                <Link className="active whitefnt" aria-current="page" to="/changePassword">Change Password</Link>
+              </li>
+              <li>
+                <Link className="active whitefnt" to="/" aria-current="page" onClick={handleLogout}>Log Out</Link>
               </li>
               </ul>
           </div>
@@ -33,12 +35,6 @@ const NavBar = ({ user, handleLogout }) => {
           </div>
         </nav> */}
       </nav>
-      :
-        <nav className='navbar'>
-          <div>
-          </div>
-        </nav>
-      }
     </>
   )
 }
