@@ -13,7 +13,7 @@ const Landing = ({ user, handleLogout }) => {
         <div className='card edge-card column-container bluebg'>
           <div className='card landing-logo center-card whitebg'>
             <img src="../../assets/landing-logo.png" alt="vibin-logo"/>
-            <h7>When the vibe needs to change...</h7>
+            <h6>When the vibe needs to change...</h6>
           </div>
             <h6 className='whitefnt'>Welcome to Vibin!</h6>
             <p className='margin-2 whitefnt'>At Vibin we're trying to get you into a band with the best vibe possible! Lets get you started! </p>
