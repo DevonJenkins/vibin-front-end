@@ -11,6 +11,16 @@ function create(genre) {
   .catch(err => console.log(err))
 }
 
+async function getAllGenres() {
+  return fetch(BASE_URL, {
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    }
+  })
+  .then(res => res.json())
+}
+
 export {
-  create
+  create,
+  getAllGenres
 }
