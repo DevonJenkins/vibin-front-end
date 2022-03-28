@@ -6,7 +6,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
-
+import AddBand from './pages/Bands/AddBand'
 import * as authService from './services/authService'
 import AddGenre from './pages/Genres/AddGenre'
 import * as genreService from './services/genreService'
@@ -77,6 +77,10 @@ const App = () => {
         <Route 
           path="/instruments"
           element={user ? <AddInstrument handleAddInstrument={handleAddInstrument} /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/bands"
+          element={user ? <AddBand /> : <Navigate to="/bands" />}
         />
       </Routes>
     </>
