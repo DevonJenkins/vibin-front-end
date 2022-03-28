@@ -13,7 +13,7 @@ const Landing = ({ user, handleLogout }) => {
             <p className='margin-2 whitefnt'>Select one of the options below to get started! </p>
             {/* ==-- Add paths when they've been created --== */}
             <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/bandCreate">Start a Band</Link></div>
-            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/">Join a Band</Link></div>
+            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/joinBand">Join a Band</Link></div>
             <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/profiles">View Profiles</Link></div>
           </div>
         </>
