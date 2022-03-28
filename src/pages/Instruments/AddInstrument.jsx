@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import * as genreService from '../../services/genreService.js'
+import * as instrumentService from '../../services/instrumentService'
 
-const AddGenre = props => {
+const AddInstrument = props => {
   const navigate = useNavigate()
   const formElement = useRef()
   const [validForm, setValidForm] = useState(false)
@@ -22,7 +22,7 @@ const AddGenre = props => {
   const handleSubmit = evt => {
     evt.preventDefault()
     try{
-      genreService.create(formData)
+      instrumentService.create(formData)
       navigate('/genres')
       setFormData({
         name: '',
@@ -36,7 +36,7 @@ const AddGenre = props => {
 
   return ( 
     <main className='card full-page-card column-container whitebg'>
-      <h1 className="whitefnt">Add a Genre</h1>
+      <h1 className="whitefnt">Add an Instrument</h1>
       <form autoComplete='off' ref={formElement} onSubmit={handleSubmit}>
         <div className='card edge-card column-container bluebg'>
           <div>
@@ -59,14 +59,18 @@ const AddGenre = props => {
                   <tr>
                     <td className='whitefnt'>Tag</td>
                     <td>
-                      <input
-                        type='text'
-                        className='form-control'
-                        id='tag-input'
-                        name='tag'
-                        value={formData.tag}
-                        onChange={handleChange}
-                      />
+                      <select 
+                      className='form-control' 
+                      id='tag-input' 
+                      name='tag' 
+                      onChange={handleChange} 
+                      value={formData.tag}
+                      >
+                        <option className='text-truncate' value='percussion'>Percussion</option>
+                        <option className='text-truncate' value='string'>String</option>
+                        <option className='text-truncate' value='wind'>Wind</option>
+                        <option className='text-truncate' value='voice'>Voice</option>
+                      </select>
                     </td>
                   </tr>
                 </tbody>
@@ -85,4 +89,4 @@ const AddGenre = props => {
   );
 }
 
-export default AddGenre
+export default AddInstrument
