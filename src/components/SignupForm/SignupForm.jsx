@@ -153,7 +153,7 @@ const SignupForm = props => {
                 onChange={handleChange}
               >
                   <option value="seeking-band">Seeking Band</option>
-                  <option value="seeking-band-members">Band Owner Seeking Members</option>
+                  <option className='text-truncate' value="seeking-band-members">Band Owner Seeking Members</option>
               </select>
 
             </td>
