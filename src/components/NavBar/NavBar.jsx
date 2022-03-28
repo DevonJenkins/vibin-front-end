@@ -18,7 +18,7 @@ const NavBar = ({ user, handleLogout }) => {
                 <Link className="active whitefnt" aria-current="page" to="/genres">Add Genre</Link>
               </li>
               <li>
-                
+                <Link className='active whitefnt' aria-current="page" to="/instruments">Add Instrument</Link>
               </li>
               <li>
                 <Link className="active whitefnt" aria-current="page" to="/changePassword">Change Password</Link>
