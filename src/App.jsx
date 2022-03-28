@@ -9,9 +9,12 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 import AddGenre from './pages/Genres/AddGenre'
 import * as genreService from './services/genreService'
+import AddInstrument from './pages/Instruments/AddInstrument'
+import * as instrumentService from './services/instrumentService.js'
 
 const App = () => {
   const [genres, setGenres] = useState([])
+  const [instruments, setInstruments] = useState([])
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
 
@@ -28,6 +31,13 @@ const App = () => {
   const handleAddGenre = newGenreData => {
     genreService.create(newGenreData)
     .then(newGenre => setGenres([...genres, newGenre]))
+    .then(navigate('/'))
+    .catch(err => console.log(err))
+  }
+
+  const handleAddInstrument = newInstrumentData => {
+    instrumentService.create(newInstrumentData)
+    .then(newInstrument => setInstruments([...instrumentService, newInstrument]))
     .then(navigate('/'))
     .catch(err => console.log(err))
   }
@@ -62,6 +72,10 @@ const App = () => {
         <Route
           path="/genres"
           element={user ? <AddGenre handleAddGenre={handleAddGenre} /> : <Navigate to="/login" />}
+        />
+        <Route 
+          path="/instruments"
+          element={user ? <AddInstrument handleAddInstrument={handleAddInstrument} /> : <Navigate to="/login" />}
         />
       </Routes>
     </>

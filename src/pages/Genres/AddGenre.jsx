@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import * as genreService from '../../services/genreService'
+import * as genreService from '../../services/genreService.js'
 
 const AddGenre = props => {
   const navigate = useNavigate()

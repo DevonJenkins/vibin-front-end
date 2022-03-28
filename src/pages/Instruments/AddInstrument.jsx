@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as instrumentService from '../../services/instrumentService'
 
-const AddGenre = props => {
+const AddInstrument = props => {
   const navigate = useNavigate()
   const formElement = useRef()
   const [validForm, setValidForm] = useState(false)
@@ -89,4 +89,4 @@ const AddGenre = props => {
   );
 }
 
-export default AddGenre
+export default AddInstrument
