@@ -29,7 +29,7 @@ const Landing = ({ user, handleLogout }) => {
             <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/login">Log In</Link></div>
             <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/signup">Sign Up</Link></div>
           </div>
-        </div>        
+        </div>
       }
       </main>
   )
