@@ -12,6 +12,7 @@ import AddGenre from './pages/Genres/AddGenre'
 import * as genreService from './services/genreService'
 import AddInstrument from './pages/Instruments/AddInstrument'
 import * as instrumentService from './services/instrumentService.js'
+import JoinBand from './pages/JoinBand/JoinBand'
 
 const App = () => {
   const [genres, setGenres] = useState([])
@@ -77,6 +78,10 @@ const App = () => {
         <Route 
           path="/instruments"
           element={user ? <AddInstrument handleAddInstrument={handleAddInstrument} /> : <Navigate to="/login" />}
+        />
+        <Route 
+        path="/joinBand"
+        element={ <JoinBand/>  }
         />
         <Route
           path="/bands"
