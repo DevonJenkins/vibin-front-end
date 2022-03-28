@@ -6,6 +6,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+
 import * as authService from './services/authService'
 import AddGenre from './pages/Genres/AddGenre'
 import * as genreService from './services/genreService'
