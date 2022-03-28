@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
+import ProfileDetails from '../../components/ProfileDetails/ProfileDetails'
 import * as profileService from '../../services/profileService'
+import NavBar from '../../components/NavBar/NavBar'
 
-const Profiles = () => {
+const Profiles = (user, handleLogout) => {
   const [profiles, setProfiles] = useState([])
 
   useEffect(()=> {
@@ -11,6 +13,7 @@ const Profiles = () => {
 
   return (
     <>
+     <NavBar user={user} handleLogout={handleLogout} />
       <h1>Hello. This is a list of all the profiles.</h1>
       {/* if user, then show the users profile 
           if bandowner, show profile of all members in band, and band profile
@@ -24,7 +27,7 @@ const Profiles = () => {
           {profiles.map(profile=>
           <div key={profile._id} className='card'>
             <div className='card-body'>
-              <p>{profile.name}</p>
+              <p>{profile.name} <ProfileDetails/>  </p>
             </div>
           </div>
           )}
