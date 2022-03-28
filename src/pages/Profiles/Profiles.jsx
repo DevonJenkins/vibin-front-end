@@ -25,6 +25,9 @@ const Profiles = () => {
           <div key={profile._id} className='card'>
             <div className='card-body'>
               <p>{profile.name}</p>
+              <p>{profile.email}</p>
+              <p>{profile.role}</p>
+              <p></p>
             </div>
           </div>
           )}
