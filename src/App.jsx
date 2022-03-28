@@ -81,7 +81,7 @@ const App = () => {
         />
         <Route 
         path="/joinBand"
-        element={user ? <JoinBand/> : <Navigate to="login"/> }
+        element={ <JoinBand/>  }
         />
         <Route
           path="/bands"
