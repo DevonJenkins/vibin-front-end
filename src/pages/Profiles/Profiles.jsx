@@ -27,7 +27,8 @@ const Profiles = (user, handleLogout) => {
           {profiles.map(profile=>
           <div key={profile._id} className='card'>
             <div className='card-body'>
-              <p>{profile.name} <ProfileDetails/>  </p>
+              <p>{profile.name}</p>
+              <ProfileDetails profiles={profiles} /> 
             </div>
           </div>
           )}
