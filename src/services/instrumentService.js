@@ -14,7 +14,7 @@ function create(instrument) {
   .catch(err => console.log(err))
 }
 
-async function getAllInstruments() {
+function getAllInstruments() {
   return fetch(BASE_URL, {
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`
