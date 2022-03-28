@@ -4,26 +4,22 @@ import * as instrumentService from '../../services/instrumentService'
 
 const AddInstrument = props => {
   const navigate = useNavigate()
-  const formElement = useRef()
-  const [validForm, setValidForm] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     tag: '',
   })
-
-  useEffect(() => {
-    formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
-  }, [formData])
+  const { name, tag } = formData
 
   const handleChange = evt => {
     setFormData({...formData, [evt.target.name]: evt.target.value})
   }
 
+
   const handleSubmit = evt => {
     evt.preventDefault()
     try{
       instrumentService.create(formData)
-      navigate('/genres')
+      navigate('/instruments')
       setFormData({
         name: '',
         tag: '',
@@ -37,7 +33,7 @@ const AddInstrument = props => {
   return ( 
     <main className='card full-page-card column-container whitebg'>
       <h1 className="whitefnt">Add an Instrument</h1>
-      <form autoComplete='off' ref={formElement} onSubmit={handleSubmit}>
+      <form autoComplete='off' onSubmit={handleSubmit}>
         <div className='card edge-card column-container bluebg'>
           <div>
               <table cellPadding={5}>
@@ -47,10 +43,9 @@ const AddInstrument = props => {
                     <td>
                       <input
                         type='text'
-                        className='form-control'
                         id='name-input'
                         name='name'
-                        value={formData.name}
+                        value={name}
                         onChange={handleChange}
                         required
                       />
@@ -60,12 +55,14 @@ const AddInstrument = props => {
                     <td className='whitefnt'>Tag</td>
                     <td>
                       <select 
-                      className='form-control' 
-                      id='tag-input' 
-                      name='tag' 
-                      onChange={handleChange} 
-                      value={formData.tag}
+                      id='tag-select'
+                      autoComplete='off'
+                      name='tag'
+                      value={tag}
+                      onChange={handleChange}
+                      required
                       >
+                        <option value={null}>--Please Choose--</option>
                         <option className='text-truncate' value='percussion'>Percussion</option>
                         <option className='text-truncate' value='string'>String</option>
                         <option className='text-truncate' value='wind'>Wind</option>
@@ -80,7 +77,6 @@ const AddInstrument = props => {
             <button
             type='submit'
             className='margin-2 br padding-2 whitebrdr whitefnt blackbg'
-            disabled={!validForm}
             >Submit</button>
           </div>
         </div>
