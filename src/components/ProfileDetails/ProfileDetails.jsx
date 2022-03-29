@@ -35,7 +35,7 @@ const ProfileDetails = (props ) => {
   return ( 
     <div className='card' >
       
-      <img src={props.profile.photo} alt={props.profile.photo} height={30} width={30} />
+      <img src={props.profile.photo} alt={props.profile.photo} height={300} width={300} />
       <details>
         <summary>Profile details</summary>
     
