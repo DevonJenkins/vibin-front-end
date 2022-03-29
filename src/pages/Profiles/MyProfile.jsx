@@ -7,9 +7,8 @@ const MyProfile = (props) => {
   const [profile, setProfile] = useState([])
 
   useEffect(()=> {
-    console.log(props.user.profile)
     profileService.getProfile(props.user.profile)
-    .then(profileData => console.log(profileData))
+    .then(profileData => setProfile(profileData))
   }, [])
 
   return (
