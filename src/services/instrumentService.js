@@ -23,7 +23,18 @@ function getAllInstruments() {
   .then(res => res.json())
 }
 
+function getProfileInstruments(ids) {
+  const instruments = ids.map(id => fetch(`${BASE_URL}/${id}`))
+  const instrumentObjects = Promise.all(instruments)
+  console.log(instrumentObjects) 
+  return instrumentObjects
+
+  
+   // .then(res => res.json())
+}
+
 export {
   create,
-  getAllInstruments
+  getAllInstruments,
+  getProfileInstruments
 }
