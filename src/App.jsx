@@ -91,7 +91,7 @@ const App = () => {
         element={ <JoinBand/>  }
         />
         <Route
-          path="/bands"
+          path="/createBand"
           element={user ? <AddBand /> : <Navigate to="/bands" />}
         />
       </Routes>

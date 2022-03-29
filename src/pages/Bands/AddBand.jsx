@@ -1,13 +1,30 @@
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import * as instrumentService from '../../services/instrumentService'
 import * as genreService from '../../services/genreService'
 
 const AddBand = ({ user, handleLogout }) => {
-
+  const formElement = useRef()
+  const navigate = useNavigate()
   const [instrumentData, setInstrumentData] = useState([])
   const [genreData, setGenreData] = useState([])
+  const [validForm, setValidForm] = useState(false)
+  const [formData, setFormData] = useState({})
+
+  const handleChange = evt => {
+    setFormData({...formData, [evt.target.name]: evt.target.value})
+  }
+
+  const handleSubmit = evt => {
+  }
+
+  // useEffect(() => {
+  //   formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
+  // }, [formData])
+
+  console.log(formElement)
 
   useEffect(() => {
     instrumentService.getAllInstruments()
@@ -18,11 +35,6 @@ const AddBand = ({ user, handleLogout }) => {
     genreService.getAllGenres()
     .then(genres => setGenreData(genres))
   }, [])
-
-  console.log(genreData)
-
-  if(instrumentData.length){
-  }
 
   return ( 
     <main className='card full-page-card column-container whitebg'>
