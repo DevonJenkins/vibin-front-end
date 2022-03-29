@@ -5,14 +5,17 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <div></div>
+          <div>{/* Please Leave this Div, it is essential for the span to function properly*/}</div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon white"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="active whitefnt" aria-current="page" href="/">Home</a>
+              <li>
+                <Link className="active whitefnt" aria-current="page" to="/">Home</Link>
+              </li>
+              <li>
+                <Link className="active whitefnt" aria-current="page" to="/myprofile">My Profile</Link>
               </li>
               <li>
                 <Link className="active whitefnt" aria-current="page" to="/bands">Create a Band</Link>
