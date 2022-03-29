@@ -1,24 +1,73 @@
 import { useState, useEffect } from 'react'
 import NavBar from '../NavBar/NavBar';
+import * as instrumentService from '../../services/instrumentService'
+import * as genreService from '../../services/genreService'
+import * as reviewService from '../../services/reviewService'
 
 
-const ProfileDetails = ({user, handleLogout} ) => {
-  const [profile, setProfiles] = useState([])
+const ProfileDetails = (props ) => {
+  const [profile, setProfile] = useState([])
+  
+  const [instrumentData, setInstrumentData] = useState([])
+  const [genreData, setGenreData] = useState([])
+  const [reviewData, setReviewData] = useState([])
+
+  useEffect(() => {
+    instrumentService.getProfileInstruments(props.profile.instruments)
+    .then(instruments => setInstrumentData(instruments))
+  }, [])
+
+  useEffect(() => {
+    genreService.getAllGenres()
+    .then(genres => setGenreData(genres))
+  }, [])
+
+  useEffect(() => {
+    reviewService.getAllReviews()
+    .then(reviews => setReviewData(reviews))
+  }, [])
+   
 
   //how do I get profile details
   return ( 
     <div className='card'>
-    <img src="https://cdn.vectorstock.com/i/1000x1000/23/81/default-avatar-profile-icon-vector-18942381.webp" alt="avatar the last airbender" height={200} width={200} />
+      
+      <img src={props.profile.avatar} alt={props.profile.avatar} />
       <details>
         <summary>Profile details</summary>
-
-              <p>
-              {profile.name}
-              </p>
-
+    
+      <p>
+        {props.profile.name}
+      </p>
+      <p>
+        {props.profile.email}
+      </p>
+      <p>
+        {props.profile.zip}
+      </p>
+      <details>
+        <summary>Instruments</summary>
+      {instrumentData.map(instrument => 
+        <p key={instrument._id}>{instrument.name}</p>
+                  )}
       </details>
+      <details>
+        <summary>Genres</summary>
+      {genreData.map(genre => 
+        <p key={genre._id}>{genre.name}</p>
+                  )}
+      </details>
+      <p>
+        {props.profile.bio}
+      </p>
+      <p>
+        {props.profile.reviews}
+      </p>
+
+
+      </details> 
     </div>
    );
 }
- 
+
 export default ProfileDetails;

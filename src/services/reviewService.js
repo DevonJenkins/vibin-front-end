@@ -1,20 +1,20 @@
 import * as tokenService from './tokenService'
-const BASE_URL = `${process.env.REACT_APP_BACKEND_SERVER_URL}/api/genres`
+const BASE_URL = `${process.env.REACT_APP_BACKEND_SERVER_URL}/api/reviews`
 
-function create(genre) {
+function create(reviews) {
   return fetch(BASE_URL, {
     method: 'POST',
     headers: new Headers({ 
       'Content-Type': 'application/json', 
       Authorization: `Bearer ${tokenService.getToken()}` 
     }),
-    body: JSON.stringify(genre),
+    body: JSON.stringify(reviews),
   })
   .then(res => res.json())
   .catch(err => console.log(err))
 }
 
-async function getAllGenres() {
+function getAllReviews() {
   return fetch(BASE_URL, {
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`
@@ -25,5 +25,5 @@ async function getAllGenres() {
 
 export {
   create,
-  getAllGenres
+  getAllReviews
 }

@@ -13,7 +13,11 @@ const Profiles = (user, handleLogout) => {
 
   return (
     <>
-     <NavBar user={user} handleLogout={handleLogout} />
+      <NavBar user={user} handleLogout={handleLogout} />
+      <br />
+      <br />
+      <br />
+
       <h1>Hello. This is a list of all the profiles.</h1>
       {/* if user, then show the users profile 
           if bandowner, show profile of all members in band, and band profile
@@ -28,7 +32,8 @@ const Profiles = (user, handleLogout) => {
           <div key={profile._id} className='card'>
             <div className='card-body'>
               <p>{profile.name}</p>
-              <ProfileDetails profiles={profiles} /> 
+              <ProfileDetails profile={profile} />
+              <p></p>
             </div>
           </div>
           )}
