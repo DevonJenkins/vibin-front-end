@@ -9,7 +9,7 @@ const SignupForm = props => {
     email: '',
     password: '',
     passwordConf: '',
-    avatar: '',
+    photo: '',
     instruments: '',
     zip: '',
     status: '',
@@ -26,7 +26,7 @@ const SignupForm = props => {
   const handleSubmit = async e => {
     e.preventDefault()
     const userFormData = new FormData()
-    userFormData.append('photo', formData.avatar)
+    userFormData.append('photo', formData.photo)
     userFormData.append('name', formData.name)
     // props.handleAddUser(userFormData)
     try {
@@ -42,7 +42,7 @@ const SignupForm = props => {
     setFormData({...formData, photo: evt.target.files[0]})
   }
 
-  const { name, email, password, passwordConf, avatar, instruments, zip, status } = formData
+  const { name, email, password, passwordConf, photo, instruments, zip, status } = formData
 
   const isFormInvalid = () => {
     return !(name && email && password && password === passwordConf)
@@ -113,9 +113,9 @@ const SignupForm = props => {
               <input
                 type="text"
                 autoComplete="off"
-                id="avatar"
-                value={avatar}
-                name="avatar"
+                id="photo"
+                value={photo}
+                name="photo"
                 onChange={handleChange}
               />
             </td>
