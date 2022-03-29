@@ -33,9 +33,9 @@ const ProfileDetails = (props ) => {
 
   //how do I get profile details
   return ( 
-    <div className='card'>
+    <div className='card' >
       
-      <img src={props.profile.photo} alt={props.profile.photo} />
+      <img src={props.profile.photo} alt={props.profile.photo} height={30} width={30} />
       <details>
         <summary>Profile details</summary>
     
