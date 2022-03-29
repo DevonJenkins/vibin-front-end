@@ -12,9 +12,10 @@ const ProfileDetails = (props ) => {
   const [instrumentData, setInstrumentData] = useState([])
   const [genreData, setGenreData] = useState([])
   const [reviewData, setReviewData] = useState([])
-  console.log(props.profile)
+
   useEffect(() => {
-    profileService.getProfile(props.profile._id).then(data => console.log(data))
+    profileService.getProfile(props.profile._id)
+    .then(data => console.log(data))
     // console.log(props.profile.instruments)
     // instrumentService.getProfileInstruments(props.profile.instruments)
     // .then(instruments => setInstrumentData(instruments))
@@ -29,7 +30,6 @@ const ProfileDetails = (props ) => {
   //   reviewService.getAllReviews()
   //   .then(reviews => setReviewData(reviews))
   // }, [])
-   
 
   //how do I get profile details
   return ( 

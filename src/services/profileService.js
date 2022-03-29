@@ -11,7 +11,7 @@ function getAllProfiles() {
 }
 
 function getProfile(id) {
-
+  
   return fetch(`${BASE_URL}/${id}`, {
     headers: { Authorization: `Bearer ${tokenService.getToken()}` },
   })
