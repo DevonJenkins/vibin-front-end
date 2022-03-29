@@ -11,7 +11,9 @@ const AddBand = ({ user, handleLogout }) => {
   const [instrumentData, setInstrumentData] = useState([])
   const [genreData, setGenreData] = useState([])
   const [validForm, setValidForm] = useState(false)
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState({
+    name: ''
+  })
 
   const handleChange = evt => {
     setFormData({...formData, [evt.target.name]: evt.target.value})
@@ -54,9 +56,9 @@ const AddBand = ({ user, handleLogout }) => {
                   type="text"
                   autoComplete="off"
                   id="name"
-                  // value={name}
+                  value={formData.name}
                   name="name"
-                  // onChange={handleChange}
+                  onChange={handleChange}
                 />
               </td>
             </tr>
