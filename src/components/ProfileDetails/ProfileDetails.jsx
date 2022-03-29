@@ -14,8 +14,9 @@ const ProfileDetails = (props ) => {
   const [reviewData, setReviewData] = useState([])
 
   useEffect(() => {
+    
     profileService.getProfile(props.profile._id)
-    .then(data => console.log(data))
+    // .then(data => console.log(data))
     // console.log(props.profile.instruments)
     // instrumentService.getProfileInstruments(props.profile.instruments)
     // .then(instruments => setInstrumentData(instruments))
