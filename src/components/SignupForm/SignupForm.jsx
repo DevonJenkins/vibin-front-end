@@ -117,6 +117,7 @@ const SignupForm = props => {
                 value={photo}
                 name="photo"
                 onChange={handleChange}
+                placeholder="paste image address"
               />
             </td>
           </tr>

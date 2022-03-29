@@ -14,8 +14,9 @@ const ProfileDetails = (props ) => {
   const [reviewData, setReviewData] = useState([])
 
   useEffect(() => {
+    
     profileService.getProfile(props.profile._id)
-    .then(data => console.log(data))
+    // .then(data => console.log(data))
     // console.log(props.profile.instruments)
     // instrumentService.getProfileInstruments(props.profile.instruments)
     // .then(instruments => setInstrumentData(instruments))
@@ -33,9 +34,9 @@ const ProfileDetails = (props ) => {
 
   //how do I get profile details
   return ( 
-    <div className='card'>
+    <div className='card' id='profile-card' >
       
-      <img src={props.profile.photo} alt={props.profile.photo} />
+      <img src={props.profile.photo} alt={props.profile.photo} height={300} width={300} />
       <details>
         <summary>Profile details</summary>
     
