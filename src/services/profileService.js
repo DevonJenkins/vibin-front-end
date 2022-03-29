@@ -15,7 +15,7 @@ function getProfile(id) {
   return fetch(`${BASE_URL}/${id}`, {
     headers: { Authorization: `Bearer ${tokenService.getToken()}` },
   })
-  .then( res => res.json())
+  .then(res => res.json())
 }
 
 export { getAllProfiles, getProfile }
