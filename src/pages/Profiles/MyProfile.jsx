@@ -8,7 +8,7 @@ const MyProfile = (props) => {
 
   useEffect(()=> {
     profileService.getProfile(props.user.profile)
-    .then(profileData => setProfile(profileData))
+    .then(profileData => console.log(profileData))
   }, [])
 
   return (
@@ -25,7 +25,6 @@ const MyProfile = (props) => {
           <ProfileDetails profile={profile} />
         </div>
       </>
-      
     </>
   )
 }
