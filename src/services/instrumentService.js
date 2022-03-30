@@ -23,26 +23,26 @@ function getAllInstruments() {
   .then(res => res.json())
 }
 
-// function getProfileInstruments(ids) {
-// return ids.map(id => fetch(`${BASE_URL}/${id}`, {
-//     method: 'GET' ,
-//     headers: new Headers({ 
-//       Authorization: `Bearer ${tokenService.getToken()}` 
-//     }),
-//   }))
-  //console.log(instruments)
+function getProfileInstruments(ids) {
+return ids.map(id => fetch(`${BASE_URL}/${id}`, {
+    method: 'GET' ,
+    headers: new Headers({ 
+      Authorization: `Bearer ${tokenService.getToken()}` 
+    }),
+  }))
+  // console.log(instruments)
   // const instrumentObjects = Promise.all(instruments)
   // console.log(instrumentObjects) 
   // return instrumentObjects
 
   
-   // .then(res => res.json())
+  //  .then(res => res.json())
 
-   //try mapping in front end
-//}
+  //  try mapping in front end
+}
 
 export {
   create,
   getAllInstruments,
-  // getProfileInstruments
+   getProfileInstruments
 }
