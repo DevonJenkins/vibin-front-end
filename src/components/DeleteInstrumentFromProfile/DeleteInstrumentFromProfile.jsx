@@ -1,8 +1,8 @@
 import * as profileService from '../../services/profileService.js'
 
 const DeleteInstrumentFromProfile = (props) => {
-  const handleDeleteInstrument = (profileId, instrumentId) => {
-    profileService.deleteInstrument(profileId, instrumentId)
+  const handleDeleteInstrument = () => {
+    profileService.deleteInstrument(props.profileId, props.instrumentId)
   }
   return ( 
     <>
