@@ -11,7 +11,7 @@ Starting a band from scratch can be a struggle. Whether it be sifting through cr
 
 # *Getting Started*
 
-Click [THIS LINK DOESN'T WORK YET. UPDATE AFTER DEPLOYMENT]() to check it out our app!
+Click [here](https://vibinapp.herokuapp.com/) to check out our app!
 
 Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning materials.
 
@@ -43,6 +43,7 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 ---
 
 # *Ice Box* :cold_face: 
+- [ ] AAU I want to be able to update profile info.
 - [ ] AAU I want chat features so I can communicate within the app rather than through email.
 - [ ] AAU I want to be able to select a theme so that I can make the app fit a more desirable aesthetic for my tastes
 - [ ] AAU I want to be able to swipe on bands/bandmembers so that the buttons don't take up room on the UI
@@ -93,7 +94,7 @@ Landing page for first time user.
 
 [Andrew Waterman](https://www.linkedin.com/in/awatersny/) for the logo design
 
-[William 'Boots' Stribling](https://www.linkedin.com/in/boots-stribling/) for the UI design 
+[William 'Boots' Stribling](https://www.linkedin.com/in/boots-stribling/) for the UI/UX design 
 
 [Devon Jenkins](https://www.linkedin.com/in/dvnjnkns/) for project management
 
