@@ -28,7 +28,6 @@ const ProfileDetails = (props ) => {
           <p>{profile.email}</p>
           <p>{profile.zip}</p>
           <p>{profile.bio}</p>
-          <p>{profile.reviews}</p>
           <details>
             <summary>Instruments</summary>
             {instrumentData ? 
