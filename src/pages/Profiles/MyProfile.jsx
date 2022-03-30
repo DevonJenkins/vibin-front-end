@@ -3,6 +3,7 @@ import ProfileDetails from '../../components/ProfileDetails/ProfileDetails'
 import * as profileService from '../../services/profileService'
 import NavBar from '../../components/NavBar/NavBar'
 import AddInstrumentToProfile from '../../components/AddInstrumentToProfile/AddInstrumenttoProfile'
+import AddGenreToProfile from '../../components/AddGenreToProfile/AddGenreToProfile'
 
 const MyProfile = (props) => {
   const [profile, setProfile] = useState([])
@@ -27,6 +28,9 @@ const MyProfile = (props) => {
           <AddInstrumentToProfile 
           profileId={props.user.profile}
           getAllInstruments={props.getAllInstruments} />
+          <AddGenreToProfile 
+          profileId={props.user.profile}
+          />
         </div>
       </>
     </>
