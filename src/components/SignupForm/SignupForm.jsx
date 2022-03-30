@@ -10,9 +10,7 @@ const SignupForm = props => {
     password: '',
     passwordConf: '',
     photo: '',
-    instruments: '',
     zip: '',
-    status: '',
   })
 
   const handleChange = e => {
@@ -42,7 +40,7 @@ const SignupForm = props => {
     setFormData({...formData, photo: evt.target.files[0]})
   }
 
-  const { name, email, password, passwordConf, photo, instruments, zip, status } = formData
+  const { name, email, password, passwordConf, photo, zip, } = formData
 
   const isFormInvalid = () => {
     return !(name && email && password && password === passwordConf)
@@ -118,19 +116,6 @@ const SignupForm = props => {
                 name="photo"
                 onChange={handleChange}
                 placeholder="paste image address"
-              />
-            </td>
-          </tr>
-          <tr>
-            <td className='whitefnt'>What instrument(s) do you play?</td>
-            <td>
-              <input
-                type="text"
-                autoComplete="off"
-                id="instruments"
-                value={instruments}
-                name="instruments"
-                onChange={handleChange}
               />
             </td>
           </tr>
