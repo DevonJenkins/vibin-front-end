@@ -34,7 +34,6 @@ const Profiles = (user, handleLogout) => {
             <div className='card-body'>
               <p>{profile.name}</p>
               <ProfileDetails profile={profile} />
-              <AddInstrumentToProfile profile={profile}/>
               <p></p>
             </div>
           </div>

@@ -24,7 +24,9 @@ const MyProfile = (props) => {
         <div className='card-body'>
           <p>{profile.name}</p>
           <ProfileDetails profile={profile} />
-          <AddInstrumentToProfile getAllInstruments={props.getAllInstruments} />
+          <AddInstrumentToProfile 
+          profileId={props.user.profile}
+          getAllInstruments={props.getAllInstruments} />
         </div>
       </>
     </>

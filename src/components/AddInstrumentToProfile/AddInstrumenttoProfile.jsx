@@ -11,10 +11,14 @@ const AddInstrumentToProfile = (props) => {
 
   useEffect(() => {
       instrumentService.getAllInstruments()
-    .then(instrumentsData => setInstruments(instrumentsData))
+    .then(instrumentsData => {
+      setInstruments(instrumentsData)
+      //Experimenting here-- trying to get the first instrument in the select form to occupy state
+      setFormData({id: instrumentsData[0]._id})
+    })
   },[])
 
-  const id = formData
+  const {id} = formData
 
   const handleChange = evt => {
     setFormData({...formData, [evt.target.name]: evt.target.value})
@@ -23,11 +27,8 @@ const AddInstrumentToProfile = (props) => {
   const handleSubmit = evt => {
     evt.preventDefault()
     try{
-      profileService.addInstrumentToProfile(formData)
-      setFormData({
-        id: '',
-      })
-    }catch (err){
+      profileService.addInstrumentToProfile(formData, props.profileId)
+      }catch (err){
       console.log('Error:', err)
     }
   }
@@ -35,9 +36,8 @@ const AddInstrumentToProfile = (props) => {
   return ( 
     <>
       <div className='card'>
-        <details>
+        <details className='margin-2'>
           <summary>Add An Instrument</summary>
-          <p>Potential Error Message Here</p>
           <form className='row-container' autoComplete='off' onSubmit={handleSubmit}>
             <table cellPadding={5}>
               <tbody>
@@ -45,13 +45,14 @@ const AddInstrumentToProfile = (props) => {
                   <td>
                     <select
                     id='instrument-select'
-                    autoComplete='off'
+                    // autoComplete='off'
                     name='id'
                     value={id}
                     onChange={handleChange}
                     >
                       {instruments.map((instrument) => 
-                        <option 
+                        <option
+                        // selected={(instrument._id === formData.id) ? 'selected' : '' } 
                           key={instrument._id} 
                           value={instrument._id}
                         >{instrument.name}</option>
