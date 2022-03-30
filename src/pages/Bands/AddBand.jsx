@@ -16,7 +16,7 @@ const AddBand = ({ user, handleLogout }) => {
   const [formData, setFormData] = useState({
     name: '',
     photo: '',
-    genres: '',
+    genres: [],
     creator: '',
     instruments: '',
     members: '',
@@ -27,6 +27,10 @@ const AddBand = ({ user, handleLogout }) => {
   }
 
   const handleSubmit = evt => {
+  }
+
+  const handlePushGenre = evt => {
+    console.log(formData.genres)
   }
 
   useEffect(() => {
@@ -64,9 +68,9 @@ const AddBand = ({ user, handleLogout }) => {
               <td className='whitefnt'>Name:</td>
               <td>
                 <input
+                  className='form-control'
                   type="text"
                   autoComplete="off"
-                  id="name"
                   value={formData.name}
                   name="name"
                   onChange={handleChange}
@@ -79,18 +83,19 @@ const AddBand = ({ user, handleLogout }) => {
               <td>
                 <select 
                   id="genres"
-                  value={formData.genres}
+                  // value={formData.genres}
                   name="genres"
-                  onChange={handleChange}
+                  // onChange={handleChange}
                 >
                   <option value=''>--Choose--</option>
                   {genres.map(genre => {
                     return <option key={genre._id} value={genre._id}>{genre.name}</option>
                   })}
                 </select>
+                <button type="button" onClick={handlePushGenre}>+</button>
               </td>
               : 
-                <td className='whitefnt'>Loading...</td>
+              <td className='whitefnt'>Loading...</td>
               }
             </tr>
             <tr>
@@ -110,7 +115,7 @@ const AddBand = ({ user, handleLogout }) => {
                 </select>
               </td>
               : 
-                <td className='whitefnt'>Loading...</td>
+              <td className='whitefnt'>Loading...</td>
               }
             </tr>
             <tr>
@@ -130,7 +135,7 @@ const AddBand = ({ user, handleLogout }) => {
                 </select>
               </td>
               : 
-                <td className='whitefnt'>Loading...</td>
+              <td className='whitefnt'>Loading...</td>
               }
             </tr>
           </tbody>
