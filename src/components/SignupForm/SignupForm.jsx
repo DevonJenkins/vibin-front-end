@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import * as authService from '../../services/authService'
 
+
 const SignupForm = props => {
+
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
@@ -10,9 +12,8 @@ const SignupForm = props => {
     password: '',
     passwordConf: '',
     photo: '',
-    instruments: '',
     zip: '',
-    status: '',
+    bio: '',
   })
 
   const handleChange = e => {
@@ -42,7 +43,7 @@ const SignupForm = props => {
     setFormData({...formData, photo: evt.target.files[0]})
   }
 
-  const { name, email, password, passwordConf, photo, instruments, zip, status } = formData
+  const { name, email, password, passwordConf, photo, zip, bio } = formData
 
   const isFormInvalid = () => {
     return !(name && email && password && password === passwordConf)
@@ -122,19 +123,6 @@ const SignupForm = props => {
             </td>
           </tr>
           <tr>
-            <td className='whitefnt'>What instrument(s) do you play?</td>
-            <td>
-              <input
-                type="text"
-                autoComplete="off"
-                id="instruments"
-                value={instruments}
-                name="instruments"
-                onChange={handleChange}
-              />
-            </td>
-          </tr>
-          <tr>
             <td className='whitefnt'>What is your zip code?</td>
             <td>
               <input
@@ -149,24 +137,23 @@ const SignupForm = props => {
               />
             </td>
           </tr>
-          <tr>
-            <td className='whitefnt'>What is your band status?</td>
+        </tbody>
+        <tr>
+            <td className='whitefnt'>Tell us about yourself</td>
             <td>
-              <select
+              <textarea
                 type="text"
                 autoComplete="off"
-                id="status"
-                value={status}
-                name="status"
+                id="bio"
+                value={bio}
+                name="bio"
                 onChange={handleChange}
-              >
-                  <option value="seeking-band">Seeking Band</option>
-                  <option className='text-truncate' value="seeking-band-members">Band Owner Seeking Members</option>
-              </select>
-
+                placeholder="bio"
+                rows="5"
+                maxLength={150}
+              />
             </td>
           </tr>
-        </tbody>
       </table>
       <div className='margin-top'>
         <button disabled={isFormInvalid()} className='margin-2 br padding-2 whitebrdr whitefnt blackbg'>
@@ -176,8 +163,11 @@ const SignupForm = props => {
           <button className='margin-2 br padding-2 whitebrdr whitefnt blackbg'>Cancel</button>
         </Link>
       </div>
+
+      
     </form>
   )
 }
+
 
 export default SignupForm
