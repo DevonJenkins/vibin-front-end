@@ -45,6 +45,12 @@ const App = () => {
     .catch(err => console.log(err))
   }
 
+  const getAllInstruments = () => {
+    instrumentService.getAllInstruments()
+    .then(allInstrumentData => setInstruments(allInstrumentData))
+    .catch(err => console.log(err))
+  }
+
   return (
     <>
       <Routes>
@@ -68,6 +74,7 @@ const App = () => {
           path='/myprofile' element={user ? <MyProfile 
                                               user={user}
                                               navigate={navigate}
+                                              getAllInstruments={getAllInstruments}
                                               /> : <Navigate to="/login" />}
         />
         <Route

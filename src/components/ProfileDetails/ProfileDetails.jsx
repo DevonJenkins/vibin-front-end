@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import NavBar from '../NavBar/NavBar';
 import * as profileService from '../../services/profileService'
+
 // import * as instrumentService from '../../services/instrumentService'
 // import * as genreService from '../../services/genreService'
 // import * as reviewService from '../../services/reviewService'
@@ -71,7 +72,7 @@ const ProfileDetails = (props ) => {
 
       </details> 
     </div>
-   );
+  );
 }
 
 export default ProfileDetails;

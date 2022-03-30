@@ -18,4 +18,18 @@ function getProfile(id) {
   .then(res => res.json())
 }
 
-export { getAllProfiles, getProfile }
+function addInstrumentToProfile(id) {
+
+  return fetch(`${BASE_URL}/${id}`, {
+    method:'PATCH',
+    headers: new Headers({ 
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${tokenService.getToken()}`
+
+    }),
+    body: JSON.stringify(id),
+  })
+  .then(res => res.json())
+}
+
+export { getAllProfiles, getProfile, addInstrumentToProfile }
