@@ -5,9 +5,7 @@ When the vibe needs to change...
  ---
 
 # *Description* 
-Starting a band from scratch can be a struggle. Whether it be sifting through craigslist ads or wandering social media platforms, It's tough to find good musicians who share similar musical interests. That's where Vibin comes in. Vibin aims to ease to struggle of forming a band by providing a platform specifically tailored to fit the needs of those looking to join or start a band. 
-
-Are you a band looking for a bass player? Are you a bass player looking for your next band? Try Vibin to make your band or bandmate search a breeze. 
+Starting a band from scratch can be a struggle. Whether it be sifting through craigslist ads or wandering social media platforms, It's tough to find good musicians who share similar musical interests. That's where Vibin comes in. Vibin aims to ease to struggle of forming a band by providing a platform specifically tailored to fit the needs of those looking to join or start a band. Are you seeking band members or a band to join?  Try Vibin to make your search a breeze. 
 
 ---
 
@@ -78,8 +76,6 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 ![](https://camo.githubusercontent.com/e514d4a289cf4131b867f4a44061ffa8b519a816336fe9838fb3a5c8d9bea135/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4865726f6b752d77686974653f7374796c653d666f722d7468652d6261646765266c6f676f3d6865726f6b75266c6f676f436f6c6f723d626c61636b)
 ![](https://camo.githubusercontent.com/53464818761dd2ff83cdeb2f01718cab329e9835d4a55a50ade0c15dca69c71f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d5472656c6c6f2d77686974653f7374796c653d666f722d7468652d6261646765266c6f676f3d5472656c6c6f266c6f676f436f6c6f723d626c61636b)
 
-![](https://camo.githubusercontent.com/ef0cc6d860eab79cb7fa7c0b0bb7a9bb95a1d12d055e0fe11434b3a34071637e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d536c61636b2d77686974653f7374796c653d666f722d7468652d6261646765266c6f676f3d736c61636b266c6f676f436f6c6f723d626c61636b)
-![](https://camo.githubusercontent.com/4a8a1e3418fbc505839d4b1f8ab63f81fb3d1ed2c1d924c26ef12bdf1e7e57eb/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d5a6f6f6d2d77686974653f7374796c653d666f722d7468652d6261646765266c6f676f3d7a6f6f6d266c6f676f436f6c6f723d626c61636b)
 
 ---
 
