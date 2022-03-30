@@ -5,6 +5,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import * as instrumentService from '../../services/instrumentService'
 import * as genreService from '../../services/genreService'
 import * as profileService from '../../services/profileService'
+import * as bandService from '../../services/bandService'
 
 const AddBand = ({ user, handleLogout }) => {
   const formElement = useRef()
@@ -23,6 +24,7 @@ const AddBand = ({ user, handleLogout }) => {
     creator: '',
     instruments: [],
     members: [],
+    zip: ''
   })
 
   const handleChange = evt => {
@@ -42,6 +44,22 @@ const AddBand = ({ user, handleLogout }) => {
   }
 
   const handleSubmit = evt => {
+    evt.preventDefault()
+    try {
+      bandService.create(formData)
+      navigate('/createBand')
+      setFormData({
+        name: '',
+        photo: '',
+        genres: [],
+        creator: '',
+        instruments: [],
+        members: [],
+        zip: ''
+      })
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   const handlePushGenre = evt => {
@@ -97,6 +115,8 @@ const AddBand = ({ user, handleLogout }) => {
                   value={formData.name}
                   name="name"
                   onChange={handleChange}
+                  placeholder="Name (Required)"
+                  required
                 />
               </td>
             </tr>
@@ -162,6 +182,22 @@ const AddBand = ({ user, handleLogout }) => {
               : 
               <td className='whitefnt'>Loading...</td>
               }
+            </tr>
+            <tr>
+              <td className='whitefnt'>Zip Code:</td>
+              <td>
+                <input
+                  className='form-control'
+                  type="text"
+                  pattern="[0-9]*"
+                  autoComplete="off"
+                  value={formData.zip}
+                  name="zip"
+                  onChange={handleChange}
+                  placeholder="Zip Code (Required)"
+                  required
+                />
+              </td>
             </tr>
           </tbody>
         </table>
