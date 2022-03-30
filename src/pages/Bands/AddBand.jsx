@@ -9,6 +9,7 @@ import * as profileService from '../../services/profileService'
 const AddBand = ({ user, handleLogout }) => {
   const formElement = useRef()
   const navigate = useNavigate()
+  const [genreId, setGenreId] = useState('')
   const [instruments, setInstruments] = useState([])
   const [genres, setGenres] = useState([])
   const [profiles, setProfiles] = useState([])
@@ -26,11 +27,15 @@ const AddBand = ({ user, handleLogout }) => {
     setFormData({...formData, [evt.target.name]: evt.target.value})
   }
 
+  const handleGenreChange = evt => {
+    setGenreId(evt.target.value)
+  }
+
   const handleSubmit = evt => {
   }
 
   const handlePushGenre = evt => {
-    console.log(formData.genres)
+    setFormData({...formData, ['genres']: [...formData['genres'], genreId]})
   }
 
   useEffect(() => {
@@ -51,6 +56,8 @@ const AddBand = ({ user, handleLogout }) => {
     profileService.getAllProfiles()
     .then(profileData => setProfiles(profileData))
   }, [])
+
+  console.log(formData.genres)
 
   return ( 
     <main className='card full-page-card column-container whitebg'>
@@ -83,9 +90,9 @@ const AddBand = ({ user, handleLogout }) => {
               <td>
                 <select 
                   id="genres"
-                  // value={formData.genres}
+                  value={genreId}
                   name="genres"
-                  // onChange={handleChange}
+                  onChange={handleGenreChange}
                 >
                   <option value=''>--Choose--</option>
                   {genres.map(genre => {
