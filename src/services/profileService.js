@@ -43,8 +43,15 @@ function addGenreToProfile(genreId, profileId) {
 }
 
 function deleteInstrument(profileId, instrumentId) {
-
+  return fetch(`${BASE_URL}/${profileId}/instruments/`, {
+    method: 'DELETE',
+    headers: new Headers({
+      Authorization: `Bearer ${tokenService.getToken()}`
+    }),
+    body: JSON.stringify(instrumentId)
+  })
 }
+
 
 
 export { 
@@ -52,4 +59,5 @@ export {
   getProfile, 
   addInstrumentToProfile,
   addGenreToProfile,
+  deleteInstrument,
 }
