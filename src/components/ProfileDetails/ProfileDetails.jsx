@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import NavBar from '../NavBar/NavBar';
 import * as profileService from '../../services/profileService'
+import DeleteInstrumentFromProfile from '../DeleteInstrumentFromProfile/DeleteInstrumentFromProfile';
 
 const ProfileDetails = (props ) => {
   const [profile, setProfile] = useState([])
@@ -33,7 +33,13 @@ const ProfileDetails = (props ) => {
             {instrumentData ? 
             <>
               {instrumentData.map(instrument => 
+                <>
                   <p key={instrument._id}>{instrument.name}</p>
+                  <DeleteInstrumentFromProfile 
+                    profileId={profile._id}
+                    instrumentId={instrument._id}
+                  />
+                </>
               )}
             </>
             :

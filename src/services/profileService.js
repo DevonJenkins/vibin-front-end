@@ -19,7 +19,6 @@ function getProfile(id) {
 }
 
 function addInstrumentToProfile(instrumentId, profileId) {
-  console.log('instrument id:', instrumentId)
   return fetch(`${BASE_URL}/${profileId}/instruments`, {
     method:'PATCH',
     headers: new Headers({ 
@@ -32,7 +31,6 @@ function addInstrumentToProfile(instrumentId, profileId) {
 }
 
 function addGenreToProfile(genreId, profileId) {
-  console.log('genre id:', genreId)
   return fetch(`${BASE_URL}/${profileId}/genres`, {
     method:'PATCH',
     headers: new Headers({ 
@@ -42,6 +40,10 @@ function addGenreToProfile(genreId, profileId) {
     body: JSON.stringify(genreId),
   })
   .then(res => res.json())
+}
+
+function deleteInstrument(profileId, instrumentId) {
+
 }
 
 
