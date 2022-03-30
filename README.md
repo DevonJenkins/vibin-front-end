@@ -45,7 +45,7 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 ---
 
 # *Ice Box* :cold_face: 
-- [ ] AAU I want to be able to update profile info.
+- [ ] AAU I want to be able to update profile info so that I can change profile information easily without having to feature request it from the devs. 
 - [ ] AAU I want chat features so I can communicate within the app rather than through email.
 - [ ] AAU I want to be able to select a theme so that I can make the app fit a more desirable aesthetic for my tastes
 - [ ] AAU I want to be able to swipe on bands/bandmembers so that the matching buttons don't take up room on the UI
@@ -92,7 +92,6 @@ Landing page for first time user.
 
 # *Credits*
 
-[Dave Collis](https://github.com/dcollis92#technologies--tools) for these super clean looking readme badges. 
 
 [Andrew Waterman](https://www.linkedin.com/in/awatersny/) for the logo design
 
@@ -100,5 +99,6 @@ Landing page for first time user.
 
 [Devon Jenkins](https://www.linkedin.com/in/dvnjnkns/) for project management
 
+[Dave Collis](https://github.com/dcollis92#technologies--tools) for the readme badges. 
 
 
