@@ -137,7 +137,6 @@ const SignupForm = props => {
               />
             </td>
           </tr>
-        </tbody>
         <tr>
             <td className='whitefnt'>Tell us about yourself</td>
             <td>
@@ -151,9 +150,10 @@ const SignupForm = props => {
                 placeholder="bio"
                 rows="5"
                 maxLength={150}
-              />
+                />
             </td>
           </tr>
+        </tbody>
       </table>
       <div className='margin-top'>
         <button disabled={isFormInvalid()} className='margin-2 br padding-2 whitebrdr whitefnt blackbg'>

@@ -5,7 +5,9 @@ When the vibe needs to change...
  ---
 
 # *Description* 
-Starting a band from scratch can be a struggle. Whether it be sifting through craigslist ads or wandering social media platforms, It's tough to find good musicians who share similar musical interests. That's where Vibin comes in. Vibin aims to ease to struggle of forming a band by providing a platform specifically tailored to fit the needs of those looking to join or start a band. Are you a band looking for a bass player? Are you a bass player looking for your next band? Try Vibin to make your band/bandmate search a breeze. 
+Starting a band from scratch can be a struggle. Whether it be sifting through craigslist ads or wandering social media platforms, It's tough to find good musicians who share similar musical interests. That's where Vibin comes in. Vibin aims to ease to struggle of forming a band by providing a platform specifically tailored to fit the needs of those looking to join or start a band. 
+
+Are you a band looking for a bass player? Are you a bass player looking for your next band? Try Vibin to make your band or bandmate search a breeze. 
 
 ---
 
@@ -26,7 +28,7 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 
 (AAU-BO)- As a user/band owner
 
-(AAU-BS)- As a band seeker
+(AAU-BS)- As a user/band seeker
 
 ## User Stories
 
@@ -46,10 +48,10 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 - [ ] AAU I want to be able to update profile info.
 - [ ] AAU I want chat features so I can communicate within the app rather than through email.
 - [ ] AAU I want to be able to select a theme so that I can make the app fit a more desirable aesthetic for my tastes
-- [ ] AAU I want to be able to swipe on bands/bandmembers so that the buttons don't take up room on the UI
+- [ ] AAU I want to be able to swipe on bands/bandmembers so that the matching buttons don't take up room on the UI
 - [ ] AAU I want the ability to send and recieve audio and video files for auditioning purposes. 
 - [ ] AAU I want geolocation features so that I can find users who are within a certain mileage radius
-- [ ] AAU I want to be able to access the features of Dave Collis's band name app (LINK IT HERE) so that I can get some insight and have some fun coming up with a new bandname. 
+- [ ] AAU I want to be able to access the features of Dave Collis's [Awful Band Names](https://awful-bandnames.herokuapp.com/bandnames) app so that I can get some insight and have some fun coming up with a new  and potentially silly bandname. 
 
 ---
 
