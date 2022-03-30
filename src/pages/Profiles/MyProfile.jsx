@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 import ProfileDetails from '../../components/ProfileDetails/ProfileDetails'
 import * as profileService from '../../services/profileService'
 import NavBar from '../../components/NavBar/NavBar'
+import AddInstrumentToProfile from '../../components/AddInstrumentToProfile/AddInstrumenttoProfile'
 
 const MyProfile = (props) => {
   const [profile, setProfile] = useState([])
 
   useEffect(()=> {
-    console.log(props.user.profile)
     profileService.getProfile(props.user.profile)
     .then(profileData => setProfile(profileData))
   }, [])
@@ -24,9 +24,11 @@ const MyProfile = (props) => {
         <div className='card-body'>
           <p>{profile.name}</p>
           <ProfileDetails profile={profile} />
+          <AddInstrumentToProfile 
+          profileId={props.user.profile}
+          getAllInstruments={props.getAllInstruments} />
         </div>
       </>
-      
     </>
   )
 }

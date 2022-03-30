@@ -11,6 +11,7 @@ const AddInstrument = props => {
   const { name, tag } = formData
 
   const handleChange = evt => {
+    console.log(evt)
     setFormData({...formData, [evt.target.name]: evt.target.value})
   }
 

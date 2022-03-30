@@ -18,4 +18,17 @@ function getProfile(id) {
   .then(res => res.json())
 }
 
-export { getAllProfiles, getProfile }
+function addInstrumentToProfile(instrumentId, profileId) {
+  console.log('instrument id:', instrumentId)
+  return fetch(`${BASE_URL}/${profileId}`, {
+    method:'PATCH',
+    headers: new Headers({ 
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${tokenService.getToken()}`
+    }),
+    body: JSON.stringify(instrumentId),
+  })
+  .then(res => res.json())
+}
+
+export { getAllProfiles, getProfile, addInstrumentToProfile }

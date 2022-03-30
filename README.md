@@ -1,20 +1,49 @@
 # *Vibin* 
-when the vibe needs to change
+
+When the vibe needs to change...
+
+ ---
 
 # *Description* 
 Starting a band from scratch can be a struggle. Whether it be sifting through craigslist ads or wandering social media platforms, It's tough to find good musicians who share similar musical interests. That's where Vibin comes in. Vibin aims to ease to struggle of forming a band by providing a platform specifically tailored to fit the needs of those looking to join or start a band. Are you a band looking for a bass player? Are you a bass player looking for your next band? Try Vibin to make your band/bandmate search a breeze. 
 
 ---
-# *MVP/Version Control*
-| MVP features |
-|--------------| 
-|feature| 
-|feature| 
-|feature| 
-|feature| 
+
+# *Getting Started*
+
+Click [THIS LINK DOESN'T WORK YET. UPDATE AFTER DEPLOYMENT]() to check it out our app!
+
+Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning materials.
 
 ---
-# *Ice Box*
+
+# *Version 1.0.0 (MVP)*
+
+## Tags
+(AAG)- As a guest
+
+(AAU)- As a user
+
+(AAU-BO)- As a user/band owner
+
+(AAU-BS)- As a band seeker
+
+## User Stories
+
+- AAG, I want to be able to sign up for Vibin so that I can make take advantage of the user functionality
+- AAG, while signing up, I want to be able to build a profile so that a bands looking for members can learn more about what I like to play.
+- AAU I want to be able to join a band or start a band
+- AAU I want to be able to upload profile photos and band photos so that other users can get a sense for who I am and what I represent 
+- AAU-BO I want to see user profiles that are looking for bands that match my relative description so that I can learn more about them
+- AAU-BO I want to accept or reject profiles so that I can filter out musicians that don't seem like a good fit
+- AAU-BO I want to be able to remove members from my band
+- AAU-BS I want to see all bands that are looking for profiles that match my location, my - desired genre, and are looking for the instrument(s) that I play. 
+- AAU-BS I to accept or reject bands to filter out those that don't seem like a good fit 
+
+---
+
+# *Ice Box* :cold_face: 
+- [ ] AAU I want chat features so I can communicate within the app rather than through email.
 - [ ] AAU I want to be able to select a theme so that I can make the app fit a more desirable aesthetic for my tastes
 - [ ] AAU I want to be able to swipe on bands/bandmembers so that the buttons don't take up room on the UI
 - [ ] AAU I want the ability to send and recieve audio and video files for auditioning purposes. 
@@ -52,12 +81,9 @@ Starting a band from scratch can be a struggle. Whether it be sifting through cr
 ---
 
 # *Screenshots* 
-Pictures
+Landing page for first time user.
 
----
-
-# *Planning Materials*
-Text/links 
+![First time user's landing page](https://i.imgur.com/jRYtAKr.png)
 
 ---
 
