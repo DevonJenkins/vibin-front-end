@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import NavBar from '../NavBar/NavBar';
 import * as profileService from '../../services/profileService'
+
 // import * as instrumentService from '../../services/instrumentService'
 // import * as genreService from '../../services/genreService'
 // import * as reviewService from '../../services/reviewService'
@@ -13,13 +14,13 @@ const ProfileDetails = (props ) => {
   const [genreData, setGenreData] = useState([])
   const [reviewData, setReviewData] = useState([])
 
-  useEffect(() => {
-    profileService.getProfile(props.profile._id)
-    .then(data => console.log(data))
+  // useEffect(() => {
+  //   profileService.getProfile(props.profile._id)
+    // .then(data => console.log(data))
     // console.log(props.profile.instruments)
     // instrumentService.getProfileInstruments(props.profile.instruments)
     // .then(instruments => setInstrumentData(instruments))
-  }, [props.profile._id])
+  // }, [props.profile._id])
 
   // useEffect(() => {
   //   genreService.getAllGenres()
@@ -70,7 +71,7 @@ const ProfileDetails = (props ) => {
 
       </details> 
     </div>
-   );
+  );
 }
 
 export default ProfileDetails;
