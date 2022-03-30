@@ -51,7 +51,7 @@ const AddInstrumentToProfile = (props) => {
                     onChange={handleChange}
                     >
                       {instruments.map((instrument) => 
-                        <option>
+                        <option
                           key={instrument._id} 
                           value={instrument._id}
                         >{instrument.name}</option>
