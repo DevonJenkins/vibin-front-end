@@ -64,9 +64,9 @@ const AddBand = ({ user, handleLogout }) => {
               <td className='whitefnt'>Name:</td>
               <td>
                 <input
+                  className='form-control'
                   type="text"
                   autoComplete="off"
-                  id="name"
                   value={formData.name}
                   name="name"
                   onChange={handleChange}
