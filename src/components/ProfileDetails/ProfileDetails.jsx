@@ -9,10 +9,10 @@ import * as profileService from '../../services/profileService'
 
 const ProfileDetails = (props ) => {
   const [profile, setProfile] = useState([])
-  
   const [instrumentData, setInstrumentData] = useState([])
   const [genreData, setGenreData] = useState([])
   const [reviewData, setReviewData] = useState([])
+  const imageUrl = props.profile.photo ? props.profile.photo : 'https://as2.ftcdn.net/v2/jpg/03/49/49/79/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg'
 
   useEffect(() => {
     
@@ -36,8 +36,8 @@ const ProfileDetails = (props ) => {
   //how do I get profile details
   return ( 
     <div className='card' id='profile-card' >
-      
-      <img src={props.profile.photo} alt={props.profile.photo} height={300} width={300} />
+
+      <img src={imageUrl} alt={props.profile.photo} height={300} width={300} />
       <details className='margin-2'>
         <summary>Profile details</summary>
     
