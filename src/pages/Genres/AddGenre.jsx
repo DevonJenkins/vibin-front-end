@@ -38,10 +38,6 @@ const AddGenre = props => {
   return (
     <>
       <NavBar user={props.user} handleLogout={props.handleLogout} />
-      <br />
-      <br />
-      <br />
-
       <main className='card full-page-card column-container whitebg'>
         <h1 className="whitefnt">Add a Genre</h1>
         <form autoComplete='off' ref={formElement} onSubmit={handleSubmit}>

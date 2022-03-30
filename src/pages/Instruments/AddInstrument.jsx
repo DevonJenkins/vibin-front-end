@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import * as instrumentService from '../../services/instrumentService'
+import NavBar from '../../components/NavBar/NavBar'
 
 const AddInstrument = props => {
   const navigate = useNavigate()
@@ -32,57 +33,60 @@ const AddInstrument = props => {
   }
 
   return ( 
-    <main className='card full-page-card column-container whitebg'>
-      <h1 className="whitefnt">Add an Instrument</h1>
-      <form autoComplete='off' onSubmit={handleSubmit}>
-        <div className='card edge-card column-container bluebg'>
-          <div>
-              <table cellPadding={5}>
-                <tbody>
-                  <tr>
-                    <td className='whitefnt'>Name</td>
-                    <td>
-                      <input
-                        type='text'
-                        id='name-input'
-                        name='name'
-                        value={name}
+    <>
+      <NavBar user={props.user} handleLogout={props.handleLogout} />
+      <main className='card full-page-card column-container whitebg'>
+        <h1 className="whitefnt">Add an Instrument</h1>
+        <form autoComplete='off' onSubmit={handleSubmit}>
+          <div className='card edge-card column-container bluebg'>
+            <div>
+                <table cellPadding={5}>
+                  <tbody>
+                    <tr>
+                      <td className='whitefnt'>Name</td>
+                      <td>
+                        <input
+                          type='text'
+                          id='name-input'
+                          name='name'
+                          value={name}
+                          onChange={handleChange}
+                          required
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className='whitefnt'>Tag</td>
+                      <td>
+                        <select 
+                        id='tag-select'
+                        autoComplete='off'
+                        name='tag'
+                        value={tag}
                         onChange={handleChange}
                         required
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className='whitefnt'>Tag</td>
-                    <td>
-                      <select 
-                      id='tag-select'
-                      autoComplete='off'
-                      name='tag'
-                      value={tag}
-                      onChange={handleChange}
-                      required
-                      >
-                        <option value={null}>--Please Choose--</option>
-                        <option className='text-truncate' value='percussion'>Percussion</option>
-                        <option className='text-truncate' value='string'>String</option>
-                        <option className='text-truncate' value='wind'>Wind</option>
-                        <option className='text-truncate' value='voice'>Voice</option>
-                      </select>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                        >
+                          <option value={null}>--Please Choose--</option>
+                          <option className='text-truncate' value='percussion'>Percussion</option>
+                          <option className='text-truncate' value='string'>String</option>
+                          <option className='text-truncate' value='wind'>Wind</option>
+                          <option className='text-truncate' value='voice'>Voice</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <div className='margin-top'>
+              <button
+              type='submit'
+              className='margin-2 br padding-2 whitebrdr whitefnt blackbg'
+              >Submit</button>
+            </div>
           </div>
-          <div className='margin-top'>
-            <button
-            type='submit'
-            className='margin-2 br padding-2 whitebrdr whitefnt blackbg'
-            >Submit</button>
-          </div>
-        </div>
-      </form>
-    </main>
+        </form>
+      </main>
+    </>
   );
 }
 
