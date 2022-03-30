@@ -2,11 +2,6 @@ import { useState, useEffect } from 'react'
 import NavBar from '../NavBar/NavBar';
 import * as profileService from '../../services/profileService'
 
-// import * as instrumentService from '../../services/instrumentService'
-// import * as genreService from '../../services/genreService'
-// import * as reviewService from '../../services/reviewService'
-
-
 const ProfileDetails = (props ) => {
   const [profile, setProfile] = useState([])
   const [instrumentData, setInstrumentData] = useState([])
@@ -17,6 +12,7 @@ const ProfileDetails = (props ) => {
   useEffect(() => {
     profileService.getProfile(props.profile._id)
     .then(profileData => {
+      setProfile(profileData)
       setInstrumentData(profileData.instruments)
       setGenreData(profileData.genres)
     })
@@ -28,12 +24,10 @@ const ProfileDetails = (props ) => {
       <img src={imageUrl} alt={props.profile.photo} height={300} width={300} />
       <details className='margin-2'>
           <summary>Profile Details</summary>
-      
-          <p>{props.profile.name}</p>
-          <p>{props.profile.email}</p>
-          <p>{props.profile.zip}</p>
-          <p>{props.profile.bio}</p>
-          <p>{props.profile.reviews}</p>
+          <p>{profile.name}</p>
+          <p>{profile.email}</p>
+          <p>{profile.zip}</p>
+          <p>{profile.bio}</p>
           <details>
             <summary>Instruments</summary>
             {instrumentData ? 
