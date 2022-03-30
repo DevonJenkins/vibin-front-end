@@ -10,6 +10,8 @@ const AddBand = ({ user, handleLogout }) => {
   const formElement = useRef()
   const navigate = useNavigate()
   const [genreId, setGenreId] = useState('')
+  const [instrumentId, setInstrumentId] = useState('')
+  const [memberId, setMemberId] = useState('')
   const [instruments, setInstruments] = useState([])
   const [genres, setGenres] = useState([])
   const [profiles, setProfiles] = useState([])
@@ -19,8 +21,8 @@ const AddBand = ({ user, handleLogout }) => {
     photo: '',
     genres: [],
     creator: '',
-    instruments: '',
-    members: '',
+    instruments: [],
+    members: [],
   })
 
   const handleChange = evt => {
@@ -31,11 +33,27 @@ const AddBand = ({ user, handleLogout }) => {
     setGenreId(evt.target.value)
   }
 
+  const handleInstrumentChange = evt => {
+    setInstrumentId(evt.target.value)
+  }
+
+  const handleMemberChange = evt => {
+    setMemberId(evt.target.value)
+  }
+
   const handleSubmit = evt => {
   }
 
   const handlePushGenre = evt => {
-    setFormData({...formData, ['genres']: [...formData['genres'], genreId]})
+    if(genreId) setFormData({...formData, ['genres']: [...formData.genres, genreId]})
+  }
+  
+  const handlePushInstrument = evt => {
+    if(instrumentId) setFormData({...formData, ['instruments']: [...formData.instruments, instrumentId]})
+  }
+
+  const handlePushMember = evt => {
+    if(memberId) setFormData({...formData, ['members']: [...formData.members, memberId]})
   }
 
   useEffect(() => {
@@ -56,8 +74,6 @@ const AddBand = ({ user, handleLogout }) => {
     profileService.getAllProfiles()
     .then(profileData => setProfiles(profileData))
   }, [])
-
-  console.log(formData.genres)
 
   return ( 
     <main className='card full-page-card column-container whitebg'>
@@ -111,15 +127,16 @@ const AddBand = ({ user, handleLogout }) => {
               <td>
                 <select 
                   id='instruments'
-                  value={formData.instruments}
+                  value={instrumentId}
                   name="instruments"
-                  onChange={handleChange}
+                  onChange={handleInstrumentChange}
                 >
                   <option value=''>--Choose--</option>
                   {instruments.map(instrument => {
                     return <option key={instrument._id} value={instrument._id}>{instrument.name}</option>
                   })}
                 </select>
+                <button type="button" onClick={handlePushInstrument}>+</button>
               </td>
               : 
               <td className='whitefnt'>Loading...</td>
@@ -131,15 +148,16 @@ const AddBand = ({ user, handleLogout }) => {
               <td>
                 <select 
                   id='members'
-                  value={formData.members}
+                  value={memberId}
                   name="members"
-                  onChange={handleChange}
+                  onChange={handleMemberChange}
                 >
                   <option value=''>--Choose--</option>
                   {profiles.map(profile => {
                     return <option key={profile._id} value={profile._id}>{profile.name}</option>
                   })}
                 </select>
+                <button type="button" onClick={handlePushMember}>+</button>
               </td>
               : 
               <td className='whitefnt'>Loading...</td>
