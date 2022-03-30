@@ -19,8 +19,6 @@ const MyProfile = (props) => {
       <br />
       <br />
       <br />
-
-      <h1>Hello. This is your Profile</h1>
       <>
         <div className='card-body'>
           <p>{profile.name}</p>

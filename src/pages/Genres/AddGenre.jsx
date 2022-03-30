@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import NavBar from '../../components/NavBar/NavBar'
 import * as genreService from '../../services/genreService.js'
 
 const AddGenre = props => {
@@ -34,54 +35,57 @@ const AddGenre = props => {
   
   }
 
-  return ( 
-    <main className='card full-page-card column-container whitebg'>
-      <h1 className="whitefnt">Add a Genre</h1>
-      <form autoComplete='off' ref={formElement} onSubmit={handleSubmit}>
-        <div className='card edge-card column-container bluebg'>
-          <div>
-              <table cellPadding={5}>
-                <tbody>
-                  <tr>
-                    <td className='whitefnt'>Name</td>
-                    <td>
-                      <input
-                        type='text'
-                        className='form-control'
-                        id='name-input'
-                        name='name'
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className='whitefnt'>Tag</td>
-                    <td>
-                      <input
-                        type='text'
-                        className='form-control'
-                        id='tag-input'
-                        name='tag'
-                        value={formData.tag}
-                        onChange={handleChange}
-                      />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+  return (
+    <>
+      <NavBar user={props.user} handleLogout={props.handleLogout} />
+      <main className='card full-page-card column-container whitebg'>
+        <h1 className="whitefnt">Add a Genre</h1>
+        <form autoComplete='off' ref={formElement} onSubmit={handleSubmit}>
+          <div className='card edge-card column-container bluebg'>
+            <div>
+                <table cellPadding={5}>
+                  <tbody>
+                    <tr>
+                      <td className='whitefnt'>Name</td>
+                      <td>
+                        <input
+                          type='text'
+                          className='form-control'
+                          id='name-input'
+                          name='name'
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className='whitefnt'>Tag</td>
+                      <td>
+                        <input
+                          type='text'
+                          className='form-control'
+                          id='tag-input'
+                          name='tag'
+                          value={formData.tag}
+                          onChange={handleChange}
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <div className='margin-top'>
+              <button
+              type='submit'
+              className='margin-2 br padding-2 whitebrdr whitefnt blackbg'
+              disabled={!validForm}
+              >Submit</button>
+            </div>
           </div>
-          <div className='margin-top'>
-            <button
-            type='submit'
-            className='margin-2 br padding-2 whitebrdr whitefnt blackbg'
-            disabled={!validForm}
-            >Submit</button>
-          </div>
-        </div>
-      </form>
-    </main>
+        </form>
+      </main>
+    </>
   );
 }
 
