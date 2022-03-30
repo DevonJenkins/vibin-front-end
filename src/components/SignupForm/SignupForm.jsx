@@ -149,23 +149,6 @@ const SignupForm = props => {
               />
             </td>
           </tr>
-          <tr>
-            <td className='whitefnt'>What is your band status?</td>
-            <td>
-              <select
-                type="text"
-                autoComplete="off"
-                id="status"
-                value={status}
-                name="status"
-                onChange={handleChange}
-              >
-                  <option value="seeking-band">Seeking Band</option>
-                  <option className='text-truncate' value="seeking-band-members">Band Owner Seeking Members</option>
-              </select>
-
-            </td>
-          </tr>
         </tbody>
       </table>
       <div className='margin-top'>
