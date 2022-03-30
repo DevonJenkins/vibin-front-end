@@ -116,3 +116,7 @@ margin: 5vh;
 .landing-logo {
   width: 80vw;
 }
+
+#profile-card{
+  align-items: center;
+}

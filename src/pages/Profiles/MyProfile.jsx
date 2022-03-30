@@ -10,7 +10,7 @@ const MyProfile = (props) => {
   useEffect(()=> {
     profileService.getProfile(props.user.profile)
     .then(profileData => setProfile(profileData))
-  }, [props.user.profile])
+  }, [])
 
   return (
     <>
@@ -27,7 +27,6 @@ const MyProfile = (props) => {
           <AddInstrumentToProfile getAllInstruments={props.getAllInstruments} />
         </div>
       </>
-      
     </>
   )
 }
