@@ -94,22 +94,23 @@ const AddBand = ({ user, handleLogout }) => {
   }, [])
 
   return ( 
-    <main className='card full-page-card column-container whitebg'>
+    <main className='card full-page-card column-container whitebg margin-top'>
       <NavBar user={user} handleLogout={handleLogout} />
       <div className='card edge-card column-container bluebg'>
-        <h1 className='whitefnt'>Create a Band</h1>
+        <h1 className='whitefnt pacifico margin-btm'>Create a Band</h1>
         <form
+          className="asap item-card"
           autoComplete="off"
           ref={formElement}
           onSubmit={handleSubmit}
         >
-        <table cellPadding={5}>
+        <table className="column-container" cellPadding={4}>
           <tbody>
             <tr>
-              <td className='whitefnt'>Name:</td>
+              <td className='whitefnt asap labels'>Name:</td>
               <td>
                 <input
-                  className='form-control'
+                  className='form-control asap inputs text-truncate'
                   type="text"
                   autoComplete="off"
                   value={formData.name}
@@ -121,11 +122,12 @@ const AddBand = ({ user, handleLogout }) => {
               </td>
             </tr>
             <tr>
-              <td className='whitefnt'>Genres:</td>
+              <td className='whitefnt asap labels'>Genres:</td>
               {genres.length ?
-              <td>
+              <><td className="inputs">
                 <select 
                   id="genres"
+                  className="asap inputs text-truncate"
                   value={genreId}
                   name="genres"
                   onChange={handleGenreChange}
@@ -135,18 +137,21 @@ const AddBand = ({ user, handleLogout }) => {
                     return <option key={genre._id} value={genre._id}>{genre.name}</option>
                   })}
                 </select>
-                <button type="button" onClick={handlePushGenre}>+</button>
               </td>
+              <td>
+                <button type="button" className="asap add-button" onClick={handlePushGenre}>+</button>
+              </td></>
               : 
-              <td className='whitefnt'>Loading...</td>
+              <td className='blackfnt asap inputs whitebg'>Loading...</td>
               }
             </tr>
             <tr>
-              <td className='whitefnt'>Instruments:</td>
+              <td className='whitefnt asap labels'>Instruments:</td>
               {instruments.length ?
-              <td>
+              <><td>
                 <select 
                   id='instruments'
+                  className="asap inputs"
                   value={instrumentId}
                   name="instruments"
                   onChange={handleInstrumentChange}
@@ -156,18 +161,21 @@ const AddBand = ({ user, handleLogout }) => {
                     return <option key={instrument._id} value={instrument._id}>{instrument.name}</option>
                   })}
                 </select>
-                <button type="button" onClick={handlePushInstrument}>+</button>
-              </td>
+                </td>
+                <td>
+                  <button type="button" className="asap add-button" onClick={handlePushInstrument}>+</button>
+                </td></>
               : 
-              <td className='whitefnt'>Loading...</td>
+              <td className='blackfnt asap inputs whitebg'>Loading...</td>
               }
             </tr>
             <tr>
-              <td className='whitefnt'>Members:</td>
+              <td className='whitefnt asap labels'>Members:</td>
               {instruments.length ?
-              <td>
+              <><td>
                 <select 
                   id='members'
+                  className="asap inputs"
                   value={memberId}
                   name="members"
                   onChange={handleMemberChange}
@@ -177,17 +185,19 @@ const AddBand = ({ user, handleLogout }) => {
                     return <option key={profile._id} value={profile._id}>{profile.name}</option>
                   })}
                 </select>
-                <button type="button" onClick={handlePushMember}>+</button>
-              </td>
+                </td>
+                <td>
+                  <button className="add-button" type="button" onClick={handlePushMember}>+</button>
+                </td></>
               : 
-              <td className='whitefnt'>Loading...</td>
+              <td className='blackfnt asap inputs whitebg'>Loading...</td>
               }
             </tr>
             <tr>
-              <td className='whitefnt'>Zip Code:</td>
+              <td className='whitefnt labels'>Zip Code:</td>
               <td>
                 <input
-                  className='form-control'
+                  className='form-control inputs'
                   type="text"
                   pattern="[0-9]*"
                   autoComplete="off"
