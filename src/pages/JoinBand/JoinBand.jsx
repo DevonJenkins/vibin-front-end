@@ -6,7 +6,7 @@ const JoinBand = ({ user, handleLogout }) => {
     <>
     <NavBar user={user} handleLogout={handleLogout} />
 
-    <main className='card full-page-card column-container whitebg margin-top'>
+    <main className='card full-page-card column-container whitebg'>
       
       <div className='card edge-card column-container bluebg'>
         <div className='card landing-logo center-card whitebg'>
