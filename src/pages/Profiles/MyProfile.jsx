@@ -20,8 +20,9 @@ const MyProfile = (props) => {
       <br />
       <br />
       <>
-        <div className='card-body margin-top'>
-          <p>{profile.name}</p>
+        <div className='margin-2
+            full-page-card column-container bluebg'>
+          <h1 className='whitefnt'>{profile.name}</h1>
           <ProfileDetails profile={profile} />
           <AddInstrumentToProfile 
           profileId={props.user.profile}
