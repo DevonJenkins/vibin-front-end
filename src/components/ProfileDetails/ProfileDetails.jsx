@@ -28,16 +28,38 @@ const ProfileDetails = (props ) => {
   }
   
   return ( 
-    <div className='card' id='profile-card' >
+    <div className='margin-2
+    card column-container yellowbg'id='profile-card' >
 
-      <img src={imageUrl} alt={props.profile.photo} height={300} width={300} />
-      <details className='margin-2'>
-          <summary>Profile Details</summary>
-          <p>{profile.name}</p>
-          <p>{profile.email}</p>
-          <p>{profile.zip}</p>
-          <p>{profile.bio}</p>
+      <img src={imageUrl} alt={props.profile.photo} height={250} width={250} className='margin-2' />
+      <details className='margin-2' >
+
+        <table className='profile-detail-table'>
+          <tbody>
+            <tr>
+              <td> 
+                <p>Email:</p> 
+              </td>
+              <td><p> {profile.email} </p></td>
+            </tr>
+            <tr>
+              <td> 
+                <p>Zip: </p>
+              </td>
+              <td> <p>{profile.zip}</p></td>
+            </tr>
+          </tbody>
+        </table>
+          <summary> <b>Profile Details</b> </summary>
+          {profile.bio ? 
+          <div className='card bluebg'>
+          <p className='whitefnt'>{profile.bio}</p>
+          </div>
+          :
+          ""
+          }
           <details>
+
             <summary>Instruments</summary>
             {instrumentData ? 
             <>
