@@ -19,15 +19,17 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 
 # *Roles*
 
-[Andrew Waterman](https://www.linkedin.com/in/awatersny/) - Github Manager
+[Andrew Waterman](https://www.linkedin.com/in/awatersny/) - Version Control Manager
 
-[William 'Boots' Stribling](https://www.linkedin.com/in/boots-stribling/) - UI/UX designer
+[William 'Boots' Stribling](https://www.linkedin.com/in/boots-stribling/) - UI/UX Designer
 
-[Devon Jenkins](https://www.linkedin.com/in/dvnjnkns/) - Agile project management
+[Devon Jenkins](https://www.linkedin.com/in/dvnjnkns/) - Agile Project Manager
 
 ---
 
 # *Version 1.0.0 (MVP)*
+
+Please note that our app was designed following a mobile first approach with primarily the iPhone 12 Pro screen size in mind. Accessibility is important to us, so we're working hard on accomodating more screen sizes. Feel free to submit a feature request if you notice anything out of place on your device. 
 
 ## Tags
 (AAG)- As a guest
@@ -91,9 +93,15 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 ---
 
 # *Screenshots* 
-Landing page for first time user.
+Landing page for first time user -
 
-![First time user's landing page](https://i.imgur.com/jRYtAKr.png)
+![First time user's landing page](https://i.imgur.com/i85tW9l.png)
+
+
+
+Landing page for logged in user -
+
+![Logged in user's landing page](https://i.imgur.com/pXMd5LP.png)
 
 ---
 
