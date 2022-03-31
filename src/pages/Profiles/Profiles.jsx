@@ -30,7 +30,7 @@ const Profiles = (user, handleLogout) => {
       {profiles.length ? 
         <>
           {profiles.map(profile=>
-          <div key={profile._id} className='card'>
+          <div key={profile._id} className='card bluebg'>
             <div className='card-body'>
               <p>{profile.name}</p>
               <ProfileDetails profile={profile} />

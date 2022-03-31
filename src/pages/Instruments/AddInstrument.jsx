@@ -35,7 +35,7 @@ const AddInstrument = props => {
   return ( 
     <>
       <NavBar user={props.user} handleLogout={props.handleLogout} />
-      <main className='card full-page-card column-container whitebg'>
+      <main className='card full-page-card column-container whitebg margin-top'>
         <h1 className="whitefnt">Add an Instrument</h1>
         <form autoComplete='off' onSubmit={handleSubmit}>
           <div className='card edge-card column-container bluebg'>

@@ -42,14 +42,13 @@ const ChangePasswordForm = props => {
       className='{styles.container}'
     >
       
-      <table>
+      <table cellPadding={5}>
         <tbody>
           <tr>
-            <td className='whitefnt' >
-              Current Password
-            </td>
+            <td className='whitefnt labels asap' >Current Password</td>
             <td htmlFor="password" className='whitefnt' >
                 <input
+                    className='inputs asap'
                 type="password"
                 autoComplete="off"
                 id="password"
@@ -61,11 +60,12 @@ const ChangePasswordForm = props => {
           </tr>
 
           <tr>
-            <td htmlFor="newPassword"  className='whitefnt'>
+            <td className='whitefnt labels asap' htmlFor="newPassword"  >
                 New Password
             </td>
             <td>
             <input
+                className='inputs asap'
                 type="password"
                 autoComplete="off"
                 id="newPassword"
@@ -77,11 +77,12 @@ const ChangePasswordForm = props => {
           </tr>
 
           <tr>
-            <td htmlFor="newPasswordConf"  className='whitefnt' >
+            <td className='whitefnt labels asap' htmlFor="newPasswordConf"  >
               Confirm New Password
             </td>
             <td>
             <input
+                className='inputs asap'
                 type="password"
                 autoComplete="off"
                 id="newPasswordConf"
@@ -94,12 +95,12 @@ const ChangePasswordForm = props => {
         </tbody>
       </table>
       
-      <div className='margin-top'>
-        <button disabled={isFormInvalid()} className='{styles.button}'>
+      <div className='margin-top row-container'>
+        <button disabled={isFormInvalid()} className='margin-2  br-5 padding-2 whitebrdr card blackbg asap'>
           Change Password
         </button>
         <Link to="/">
-          <button>Cancel</button>
+          <button className='margin-2  br-5 padding-2 whitebrdr card blackbg asap whitefnt'>Cancel</button>
         </Link>
       </div>
     </form>

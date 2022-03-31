@@ -4,11 +4,11 @@ import NavBar from '../../components/NavBar/NavBar'
 const Landing = ({ user, handleLogout }) => {
 
     return (
-    <main className='card full-page-card column-container whitebg'>
+    <main className='card full-page-card column-container whitebg margin-top'>
       {user ? 
         <>
           <NavBar user={user} handleLogout={handleLogout} />
-          <div className='card edge-card column-container bluebg'>
+          <div className='card edge-card column-container svgbg'>
             <h1 className='whitefnt pacifico '>Welcome back to Vibin!</h1>
             <div className='mw-60 margin-btm margin-2'>
               <p className='whitefnt asap'>Select one of the options below to get started! </p>

@@ -9,8 +9,8 @@ const Signup = props => {
   }
 
   return (
-    <main className='card full-page-card column-container whitebg'>
-      <div className='card edge-card column-container bluebg'>
+    <main className='card full-page-card column-container whitebg margin-top'>
+      <div className='card edge-card column-container svgbg'>
         <div>
           <h1 className='whitefnt pacifico'>Sign Up</h1>
           <p className='alertfnt margin-btm'>{message}</p>
