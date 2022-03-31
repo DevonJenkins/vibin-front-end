@@ -6,7 +6,7 @@ const ProfileDetails = (props ) => {
   const [instrumentData, setInstrumentData] = useState([])
   const [genreData, setGenreData] = useState([])
   const [reviewData, setReviewData] = useState([])
-  const imageUrl = props.profile.photo ? props.profile.photo : 'https://as2.ftcdn.net/v2/jpg/03/49/49/79/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg'
+  const imageUrl = props.profile.photo ? props.profile.photo : 'https://i0.wp.com/sbcf.fr/wp-content/uploads/2018/03/sbcf-default-avatar.png?w=300&ssl=1'
 
   useEffect(() => {
     profileService.getProfile(props.profile._id)
@@ -19,25 +19,45 @@ const ProfileDetails = (props ) => {
 
   const handleDeleteInstrument = (profileId, instrumentId ) => {
     profileService.deleteInstrument(profileId, instrumentId)
-    // .then(profileData => [...profile, setProfile(profileData)])
   }
 
   const handleDeleteGenre = (profileId, genreId) => {
     profileService.deleteGenre(profileId, genreId)
-    // .then(profileData => [...profile, setProfile(profileData)])
   }
   
   return ( 
-    <div className='card' id='profile-card' >
+    <div className='margin-2
+    card column-container yellowbg'id='profile-card' >
 
-      <img src={imageUrl} alt={props.profile.photo} height={300} width={300} />
-      <details className='margin-2'>
-          <summary>Profile Details</summary>
-          <p>{profile.name}</p>
-          <p>{profile.email}</p>
-          <p>{profile.zip}</p>
-          <p>{profile.bio}</p>
+      <img src={imageUrl} alt={props.profile.photo} height={250} width={250} className='margin-2' />
+      <details className='margin-2' >
+
+        <table className='profile-detail-table'>
+          <tbody>
+            <tr>
+              <td> 
+                <p>Email:</p> 
+              </td>
+              <td><p> {profile.email} </p></td>
+            </tr>
+            <tr>
+              <td> 
+                <p>Zip: </p>
+              </td>
+              <td> <p>{profile.zip}</p></td>
+            </tr>
+          </tbody>
+        </table>
+          <summary> <b>Profile Details</b> </summary>
+          {profile.bio ? 
+          <div className='card bluebg'>
+          <p className='whitefnt'>{profile.bio}</p>
+          </div>
+          :
+          ""
+          }
           <details>
+
             <summary>Instruments</summary>
             {instrumentData ? 
             <>

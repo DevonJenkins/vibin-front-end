@@ -17,7 +17,19 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 
 ---
 
+# *Roles*
+
+[Andrew Waterman](https://www.linkedin.com/in/awatersny/) - Version Control Manager
+
+[William 'Boots' Stribling](https://www.linkedin.com/in/boots-stribling/) - UI/UX Designer
+
+[Devon Jenkins](https://www.linkedin.com/in/dvnjnkns/) - Agile Project Manager
+
+---
+
 # *Version 1.0.0 (MVP)*
+
+Please note that our app was designed following a mobile first approach with primarily the iPhone 12 Pro screen size in mind. Accessibility is important to us, so we're working hard on accomodating more screen sizes. Feel free to submit a feature request if you notice anything out of place on your device. 
 
 ## Tags
 (AAG)- As a guest
@@ -43,13 +55,14 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 ---
 
 # *Ice Box* :cold_face: 
+- [ ] AAU-BS I want to be able to look at all of the bands that match my profile descriptions so that I can accept or reject them.
 - [ ] AAU I want to be able to update profile info so that I can change profile information easily without having to feature request it from the devs. 
 - [ ] AAU I want chat features so I can communicate within the app rather than through email.
-- [ ] AAU I want to be able to select a theme so that I can make the app fit a more desirable aesthetic for my tastes
-- [ ] AAU I want to be able to swipe on bands/bandmembers so that the matching buttons don't take up room on the UI
+- [ ] AAU I want to be able to select a theme so that I can make the app fit an aesthetic that matches my tastes.
+- [ ] AAU I want to be able to swipe on bands/bandmembers so that the matching buttons don't take up room on the UI.
 - [ ] AAU I want the ability to send and recieve audio and video files for auditioning purposes. 
-- [ ] AAU I want geolocation features so that I can find users who are within a certain mileage radius
-- [ ] AAU I want to be able to access the features of Dave Collis's [Awful Band Names](https://awful-bandnames.herokuapp.com/bandnames) app so that I can get some insight and have some fun coming up with a new  and potentially silly bandname. 
+- [ ] AAU I want geolocation features so that I can find users who are within a certain mileage radius.
+- [ ] AAU-BO I want to be able to access the features of Dave Collis's [Awful Band Names](https://awful-bandnames.herokuapp.com/bandnames) app so that I can get some insight and have some fun coming up with a new  and potentially silly bandnames. 
 
 ---
 
@@ -80,9 +93,15 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 ---
 
 # *Screenshots* 
-Landing page for first time user.
+Landing page for first time user -
 
-![First time user's landing page](https://i.imgur.com/jRYtAKr.png)
+![First time user's landing page](https://i.imgur.com/i85tW9l.png)
+
+
+
+Landing page for logged in user -
+
+![Logged in user's landing page](https://i.imgur.com/pXMd5LP.png)
 
 ---
 
@@ -91,9 +110,6 @@ Landing page for first time user.
 
 [Andrew Waterman](https://www.linkedin.com/in/awatersny/) for the logo design
 
-[William 'Boots' Stribling](https://www.linkedin.com/in/boots-stribling/) for the UI/UX design 
-
-[Devon Jenkins](https://www.linkedin.com/in/dvnjnkns/) for project management
 
 [Dave Collis](https://github.com/dcollis92#technologies--tools) for the readme badges. 
 
