@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
-import DeleteInstrumentFromProfile from '../DeleteInstrumentFromProfile/DeleteInstrumentFromProfile';
 
 const ProfileDetails = (props ) => {
   const [profile, setProfile] = useState([])
@@ -18,6 +17,16 @@ const ProfileDetails = (props ) => {
     })
   }, [props.profile._id])
 
+  const handleDeleteInstrument = (profileId, instrumentId ) => {
+    profileService.deleteInstrument(profileId, instrumentId)
+    // .then(profileData => [...profile, setProfile(profileData)])
+  }
+
+  const handleDeleteGenre = (profileId, genreId) => {
+    profileService.deleteGenre(profileId, genreId)
+    // .then(profileData => [...profile, setProfile(profileData)])
+  }
+  
   return ( 
     <div className='card' id='profile-card' >
 
@@ -35,10 +44,10 @@ const ProfileDetails = (props ) => {
               {instrumentData.map(instrument => 
                 <>
                   <p key={instrument._id}>{instrument.name}</p>
-                  <DeleteInstrumentFromProfile 
-                    profileId={profile._id}
-                    instrumentId={instrument._id}
-                  />
+                  <button 
+                    className='btn btn-danger' 
+                    onClick={() => handleDeleteInstrument(profile._id, instrument._id)}
+                  >Delete</button>
                 </>
               )}
             </>
@@ -53,7 +62,13 @@ const ProfileDetails = (props ) => {
             {genreData ?
             <>
               {genreData.map(genre => 
+              <>
                 <p key={genre._id}>{genre.name}</p>
+                <button 
+                    className='btn btn-danger' 
+                    onClick={() => handleDeleteGenre(profile._id, genre._id)}
+                  >Delete</button>
+              </>
               )}
             </>
             :

@@ -19,6 +19,7 @@ function getProfile(id) {
 }
 
 function addInstrumentToProfile(instrumentId, profileId) {
+  console.log(instrumentId)
   return fetch(`${BASE_URL}/${profileId}/instruments`, {
     method:'PATCH',
     headers: new Headers({ 
@@ -43,16 +44,24 @@ function addGenreToProfile(genreId, profileId) {
 }
 
 function deleteInstrument(profileId, instrumentId) {
-  return fetch(`${BASE_URL}/${profileId}/instruments/`, {
+  return fetch(`${BASE_URL}/${profileId}/instruments/${instrumentId}`, {
     method: 'DELETE',
     headers: new Headers({
       Authorization: `Bearer ${tokenService.getToken()}`
     }),
-    body: JSON.stringify(instrumentId)
   })
+  .then(res => console.log(res.json()))
 }
 
-
+function deleteGenre(profileId, genreId) {
+  return fetch(`${BASE_URL}/${profileId}/genres/${genreId}`, {
+    method: 'DELETE',
+    headers: new Headers({
+      Authorization: `Bearer ${tokenService.getToken()}`
+    })
+  })
+  .then(res => res.json())
+}
 
 export { 
   getAllProfiles, 
@@ -60,4 +69,5 @@ export {
   addInstrumentToProfile,
   addGenreToProfile,
   deleteInstrument,
+  deleteGenre,
 }
