@@ -9,7 +9,7 @@ const Landing = ({ user, handleLogout }) => {
         <>
           <NavBar user={user} handleLogout={handleLogout} />
           <div className='card edge-card column-container bluebg'>
-            <h6 className='whitefnt'>Welcome back to Vibin!</h6>
+            <h1 className='whitefnt pacifico'>Welcome back to Vibin!</h1>
             <p className='margin-2 whitefnt'>Select one of the options below to get started! </p>
             {/* ==-- Add paths when they've been created --== */}
             <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/createBand">Start a Band</Link></div>
