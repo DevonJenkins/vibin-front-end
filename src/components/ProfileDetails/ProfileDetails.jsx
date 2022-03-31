@@ -6,7 +6,7 @@ const ProfileDetails = (props ) => {
   const [instrumentData, setInstrumentData] = useState([])
   const [genreData, setGenreData] = useState([])
   const [reviewData, setReviewData] = useState([])
-  const imageUrl = props.profile.photo ? props.profile.photo : 'https://as2.ftcdn.net/v2/jpg/03/49/49/79/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg'
+  const imageUrl = props.profile.photo ? props.profile.photo : 'https://i0.wp.com/sbcf.fr/wp-content/uploads/2018/03/sbcf-default-avatar.png?w=300&ssl=1'
 
   useEffect(() => {
     profileService.getProfile(props.profile._id)
@@ -19,12 +19,10 @@ const ProfileDetails = (props ) => {
 
   const handleDeleteInstrument = (profileId, instrumentId ) => {
     profileService.deleteInstrument(profileId, instrumentId)
-    // .then(profileData => [...profile, setProfile(profileData)])
   }
 
   const handleDeleteGenre = (profileId, genreId) => {
     profileService.deleteGenre(profileId, genreId)
-    // .then(profileData => [...profile, setProfile(profileData)])
   }
   
   return ( 
