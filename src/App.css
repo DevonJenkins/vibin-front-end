@@ -97,6 +97,7 @@ td {
 
 .svgbg{
   background: url(../public/assets/1615718209retro-colors-abstract-shape.svg) no-repeat ;
+  background-size: cover;
   background-color: var(--blue);
 
 }
