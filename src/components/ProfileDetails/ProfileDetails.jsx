@@ -41,9 +41,9 @@ const ProfileDetails = (props ) => {
             <summary>Instruments</summary>
             {instrumentData ? 
             <>
-              {instrumentData.map(instrument => 
+              {instrumentData.map((instrument, idx) => 
                 <>
-                  <p key={instrument._id}>{instrument.name}</p>
+                  <p key={idx}>{instrument.name}</p>
                   <button 
                     className='btn btn-danger' 
                     onClick={() => handleDeleteInstrument(profile._id, instrument._id)}
@@ -61,9 +61,9 @@ const ProfileDetails = (props ) => {
             <summary>Genres</summary>
             {genreData ?
             <>
-              {genreData.map(genre => 
+              {genreData.map((genre, idx) => 
               <>
-                <p key={genre._id}>{genre.name}</p>
+                <p key={idx}>{genre.name}</p>
                 <button 
                     className='btn btn-danger' 
                     onClick={() => handleDeleteGenre(profile._id, genre._id)}
