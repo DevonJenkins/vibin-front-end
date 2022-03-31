@@ -12,8 +12,8 @@ const LoginPage = props => {
     <main className='card full-page-card column-container whitebg'>
       <div className='card edge-card column-container bluebg'>
         <div>
-          <h1 className='whitefnt'>Log In</h1>
-          <p className='alertfnt'>{message}</p>
+          <h1 className='whitefnt pacifico'>Log In</h1>
+          <p className='alertfnt asap margin-btm'>{message}</p>
           <LoginForm
             handleSignupOrLogin={props.handleSignupOrLogin}
             updateMessage={updateMessage}

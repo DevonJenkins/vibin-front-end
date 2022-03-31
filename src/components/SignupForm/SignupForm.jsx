@@ -54,12 +54,13 @@ const SignupForm = props => {
       autoComplete="off"
       onSubmit={handleSubmit}
     >
-      <table cellPadding={5}>
+      <table cellPadding={3}>
         <tbody>
           <tr>
-            <td className='whitefnt'>Name</td>
+            <td className='whitefnt labels asap labels asap'>Name</td>
             <td>
               <input
+                className="inputs asap"
                 type="text"
                 autoComplete="off"
                 id="name"
@@ -70,9 +71,10 @@ const SignupForm = props => {
             </td>
           </tr>
           <tr>
-            <td className='whitefnt'>Email</td>
+            <td className='whitefnt labels asap labels asap'>Email</td>
             <td>
               <input
+                className="inputs asap"
                 type="text"
                 autoComplete="off"
                 id="email"
@@ -83,9 +85,10 @@ const SignupForm = props => {
             </td>
           </tr>
           <tr>
-            <td className='whitefnt'>Password</td>
+            <td className='whitefnt labels asap'>Password</td>
             <td>
               <input
+                className="inputs asap"
                 type="password"
                 autoComplete="off"
                 id="password"
@@ -96,9 +99,10 @@ const SignupForm = props => {
             </td>
           </tr>
           <tr>
-            <td className='whitefnt'>Confirm Password</td>
+            <td className='whitefnt labels asap'>Confirm Password</td>
             <td>
               <input
+                className="inputs asap"
                 type="password"
                 autoComplete="off"
                 id="confirm"
@@ -109,9 +113,10 @@ const SignupForm = props => {
             </td>
           </tr>
           <tr>
-            <td className='whitefnt'>Profile Photo</td>
+            <td className='whitefnt labels asap'>Profile Photo</td>
             <td>
               <input
+                className="inputs asap"
                 type="text"
                 autoComplete="off"
                 id="photo"
@@ -123,9 +128,10 @@ const SignupForm = props => {
             </td>
           </tr>
           <tr>
-            <td className='whitefnt'>What is your zip code?</td>
+            <td className='whitefnt labels asap'>What is your zip code?</td>
             <td>
               <input
+                className="inputs asap"
                 type="text"
                 pattern="[0-9]*"
                 autoComplete="off"
@@ -138,9 +144,10 @@ const SignupForm = props => {
             </td>
           </tr>
         <tr>
-            <td className='whitefnt'>Tell us about yourself</td>
+            <td className='whitefnt labels asap'>Tell us about yourself</td>
             <td>
               <textarea
+                className='inputs asap'
                 type="text"
                 autoComplete="off"
                 id="bio"

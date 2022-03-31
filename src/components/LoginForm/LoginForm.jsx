@@ -33,9 +33,10 @@ const LoginForm = props => {
       <table cellPadding={5}>
         <tbody>
           <tr>
-            <td className='whitefnt'>Email</td>
+            <td className='whitefnt labels asap'>Email</td>
             <td><input
                 type="text"
+                className='inputs asap'
                 autoComplete="off"
                 id="email"
                 value={formData.email}
@@ -44,10 +45,11 @@ const LoginForm = props => {
               /></td>
           </tr>
           <tr>
-            <td className='whitefnt'>Password</td>
+            <td className='whitefnt labels asap'>Password</td>
             <td><input
               type="password"
               autoComplete="off"
+              className='inputs asap'
               id="password"
               value={formData.pw}
               name="pw"
