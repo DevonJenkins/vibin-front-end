@@ -36,6 +36,8 @@ Please note that our app was designed following a mobile first approach with pri
 
 (AAU)- As a user
 
+(AAA)- As an admin
+
 (AAU-BO)- As a user/band owner
 
 (AAU-BS)- As a user/band seeker
@@ -62,7 +64,7 @@ Please note that our app was designed following a mobile first approach with pri
 - [ ] AAU I want to be able to swipe on bands/bandmembers so that the matching buttons don't take up room on the UI.
 - [ ] AAU I want the ability to send and recieve audio and video files for auditioning purposes. 
 - [ ] AAU I want geolocation features so that I can find users who are within a certain mileage radius.
-- [ ] AAU-BO I want to be able to access the features of Dave Collis's [Awful Band Names](https://awful-bandnames.herokuapp.com/bandnames) app so that I can get some insight and have some fun coming up with a new  and potentially silly bandnames. 
+- [ ] AAU-BO I want to be able to access the features of Dave Collis's [Awful Band Names](https://awful-bandnames.herokuapp.com/bandnames) app so that I can get some insight and have some fun coming up with new bandnames. 
 
 ---
 
