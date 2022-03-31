@@ -28,7 +28,6 @@ const Profiles = ({ user, handleLogout }) => {
               <div className='card-body'>
                 <h1 className='whitefnt'>{profile.name}</h1>
                 <ProfileDetails profile={profile} />
-                <p></p>
               </div>
             </div>
             )}

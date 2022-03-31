@@ -34,10 +34,10 @@ const AddInstrumentToProfile = (props) => {
 
   return ( 
     <>
-      <div className='card'>
+      <div>
         <details className='margin-2'>
-          <summary>Add A Genre</summary>
-          <form className='row-container' autoComplete='off' onSubmit={handleSubmit}>
+          <summary className='whitefnt asap summary'>Add A Genre</summary>
+          <form autoComplete='off' onSubmit={handleSubmit}>
             <table cellPadding={5}>
               <tbody>
                 <tr>
@@ -45,6 +45,7 @@ const AddInstrumentToProfile = (props) => {
                     <select
                     id='instrument-select'
                     autoComplete='off'
+                    className='inputs asap'
                     name='id'
                     value={id}
                     onChange={handleChange}

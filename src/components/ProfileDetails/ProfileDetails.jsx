@@ -19,13 +19,11 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
   // console.log(props.profile.instruments)
   
   return ( 
-    <div className='margin-2
-    card column-container yellowbg'id='profile-card' >
-
-      <img src={imageUrl} alt={profile?.photo} height={250} width={250} className='margin-2' /> 
-      <details className='margin-2' >
-
-        <table className='profile-detail-table'>
+    <div className='margin-2 column-container bluebg'id='profile-card' >
+      <img src={imageUrl} alt="profile-photo" height={250} width={250} className='margin-2 card-top' />
+      <details className='margin-2 card-body' >
+        <summary className='whitefnt asap summary'>Profile Details</summary>
+        <table className="whitefnt">
           <tbody>
             <tr>
               <td> 
@@ -41,7 +39,6 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
             </tr>
           </tbody>
         </table>
-          <summary> <b>Profile Details</b> </summary>
           {profile?.bio ? 
           <div className='card bluebg'>
           <p className='whitefnt'>{profile?.bio}</p>
@@ -50,7 +47,6 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
           ""
           }
           <details>
-
             <summary>Instruments</summary>
             {instrumentData ? 
             <>
