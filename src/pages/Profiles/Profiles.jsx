@@ -24,7 +24,7 @@ const Profiles = ({ user, handleLogout }) => {
           <>
             {profiles.map(profile=>
             <div key={profile._id} className='margin-2
-            card column-container bluebg'>
+            card column-container profilesbg'>
               <div className='card-body'>
                 <h1 className='whitefnt'>{profile.name}</h1>
                 <ProfileDetails profile={profile} />
