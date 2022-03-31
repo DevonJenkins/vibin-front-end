@@ -21,15 +21,17 @@ const MyProfile = (props) => {
       <br />
       <>
         <div className='margin-2
-            full-page-card column-container bluebg'>
-          <h1 className='whitefnt'>{profile.name}</h1>
-          <ProfileDetails profile={profile} />
-          <AddInstrumentToProfile 
-          profileId={props.user.profile}
-          getAllInstruments={props.getAllInstruments} />
-          <AddGenreToProfile 
-          profileId={props.user.profile}
-          />
+            edge-card column-container bluebg'>
+          <div className='card-body'>
+            <h1 className='whitefnt asap margin-top'>{profile.name}</h1>
+            <ProfileDetails profile={profile} />
+            <AddInstrumentToProfile 
+            profileId={props.user.profile}
+            getAllInstruments={props.getAllInstruments} />
+            <AddGenreToProfile 
+            profileId={props.user.profile}
+            />
+          </div>
         </div>
       </>
     </>
