@@ -9,10 +9,13 @@ const ChangePassword = props => {
   }
 
   return (
-    <main className='{styles.container}'>
-      <h1>Change Password</h1>
+    <main className='card full-page-card column-container whitebg'>
       <p>{message}</p>
-      <ChangePasswordForm {...props} updateMessage={updateMessage} />
+      <div className='card edge-card column-container bluebg'>
+      <h1 className='whitefnt' >Change Password</h1>
+
+      <ChangePasswordForm {...props} updateMessage={updateMessage}  />
+      </div>
     </main>
   )
 }

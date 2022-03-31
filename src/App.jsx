@@ -75,11 +75,12 @@ const App = () => {
                                               user={user}
                                               navigate={navigate}
                                               getAllInstruments={getAllInstruments}
+                                              handleLogout={handleLogout}
                                               /> : <Navigate to="/login" />}
         />
         <Route
           path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
+          element={user ? <Profiles handleLogout={handleLogout} /> : <Navigate to="/login" />}
         />
         <Route
           path="/changePassword"
@@ -91,12 +92,17 @@ const App = () => {
         />
         <Route 
           path="/instruments"
-          element={user ? <AddInstrument handleAddInstrument={handleAddInstrument} /> : <Navigate to="/login" />}
+          element={user ? <AddInstrument handleAddInstrument={handleAddInstrument}
+          /> : <Navigate to="/login" />}
         />
         <Route 
         path="/joinBand"
-        element={ <JoinBand/>  }
+        element={
+          user ? <JoinBand user={user}  
+        handleLogout={handleLogout}
+        navigate={navigate}/> : <Navigate to="/login" />}
         />
+
         <Route
           path="/createBand"
           element={
