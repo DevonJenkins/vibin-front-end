@@ -4,7 +4,7 @@ import * as profileService from '../../services/profileService'
 import NavBar from '../../components/NavBar/NavBar'
 import AddInstrumentToProfile from '../../components/AddInstrumentToProfile/AddInstrumenttoProfile'
 
-const Profiles = (user, handleLogout) => {
+const Profiles = ({ user, handleLogout }) => {
   const [profiles, setProfiles] = useState([])
 
   useEffect(()=> {
@@ -17,31 +17,30 @@ const Profiles = (user, handleLogout) => {
       <NavBar user={user} handleLogout={handleLogout} />
       <br />
       <br />
-      <br />
-
-      <h1>Hello. This is a list of all the profiles.</h1>
-      {/* if user, then show the users profile 
-          if bandowner, show profile of all members in band, and band profile
-          if status = band owner then show all members in band
-          if status = looking for a band, then only show your own profile
-          if admin, show all\
-          admin will not be tied to status. Instead it will be tied to an id or something. I don't remember exactly how this works but its similar to userid as I recall. 
-          */}
-      {profiles.length ? 
-        <>
-          {profiles.map(profile=>
-          <div key={profile._id} className='card bluebg'>
-            <div className='card-body'>
-              <p>{profile.name}</p>
-              <ProfileDetails profile={profile} />
-              <p></p>
+      <main >
+      <div >
+        <div>
+        {profiles.length ? 
+          <>
+            {profiles.map(profile=>
+            <div key={profile._id} className='margin-2
+            card column-container bluebg'>
+              <div className='card-body'>
+                <h1 className='whitefnt'>{profile.name}</h1>
+                <ProfileDetails profile={profile} />
+                <p></p>
+              </div>
             </div>
-          </div>
-          )}
-        </>
-      :
-        <p>No profiles yet</p>
-      }
+            )}
+          </>
+        :
+          <p>No profiles yet</p>
+        }
+
+        </div>
+      </div>
+    </main>
+  
     </>
   )
 }

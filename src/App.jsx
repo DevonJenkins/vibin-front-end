@@ -88,11 +88,12 @@ const App = () => {
         />
         <Route
           path="/genres"
-          element={user ? <AddGenre handleAddGenre={handleAddGenre} /> : <Navigate to="/login" />}
+          element={user ? <AddGenre handleAddGenre={handleAddGenre} handleLogout={handleLogout} /> : <Navigate to="/login" />}
         />
         <Route 
           path="/instruments"
           element={user ? <AddInstrument handleAddInstrument={handleAddInstrument}
+          handleLogout={handleLogout}
           /> : <Navigate to="/login" />}
         />
         <Route 

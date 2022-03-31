@@ -98,6 +98,7 @@ td {
 
 .svgbg{
   background: url(../public/assets/1615718209retro-colors-abstract-shape.svg) no-repeat ;
+  background-size: cover;
   background-color: var(--blue);
 
 }
@@ -125,6 +126,10 @@ td {
   color: var(--black);
   text-decoration: none;
   font-weight: bold;
+}
+.redbg{
+  background-attachment: fixed;
+ 
 }
 
 .alertfnt {
@@ -233,5 +238,13 @@ Link:hover{
 }
 
 #profile-card{
+  align-items: center;
+}
+
+summary:hover{
+  cursor: pointer;
+}
+
+profile-details-table{
   align-items: center;
 }

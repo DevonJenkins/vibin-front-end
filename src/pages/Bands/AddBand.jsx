@@ -107,7 +107,7 @@ const AddBand = ({ user, handleLogout }) => {
         <table className="column-container" cellPadding={4}>
           <tbody>
             <tr>
-              <td className='whitefnt asap labels'>Name:</td>
+              <td className='whitefnt asap labels'>Name</td>
               <td>
                 <input
                   className='form-control asap inputs text-truncate'
@@ -122,7 +122,7 @@ const AddBand = ({ user, handleLogout }) => {
               </td>
             </tr>
             <tr>
-              <td className='whitefnt asap labels'>Genres:</td>
+              <td className='whitefnt asap labels'>Genres</td>
               {genres.length ?
               <><td className="inputs">
                 <select 
@@ -146,7 +146,7 @@ const AddBand = ({ user, handleLogout }) => {
               }
             </tr>
             <tr>
-              <td className='whitefnt asap labels'>Instruments:</td>
+              <td className='whitefnt asap labels'>Instruments</td>
               {instruments.length ?
               <><td>
                 <select 
@@ -170,7 +170,7 @@ const AddBand = ({ user, handleLogout }) => {
               }
             </tr>
             <tr>
-              <td className='whitefnt asap labels'>Members:</td>
+              <td className='whitefnt asap labels'>Members</td>
               {instruments.length ?
               <><td>
                 <select 
@@ -194,7 +194,7 @@ const AddBand = ({ user, handleLogout }) => {
               }
             </tr>
             <tr>
-              <td className='whitefnt labels'>Zip Code:</td>
+              <td className='whitefnt labels'>Zip Code</td>
               <td>
                 <input
                   className='form-control inputs'
