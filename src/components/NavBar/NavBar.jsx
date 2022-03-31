@@ -3,34 +3,34 @@ import { Link } from 'react-router-dom'
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark  blackbg">
+        <div className='container-fluid pacifico'>
           <div>{/* Please Leave this Div, it is essential for the span to function properly*/}</div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon white"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li>
-                <Link className="active whitefnt" aria-current="page" to="/">Home</Link>
+              <li className="navbar-link row-container">
+                <Link className="whitefnt" aria-current="page" to="/">Home</Link>
               </li>
-              <li>
-                <Link className="active whitefnt" aria-current="page" to="/myprofile">My Profile</Link>
+              <li className="navbar-link">
+                <Link className="whitefnt" aria-current="page" to="/myprofile">My Profile</Link>
               </li>
-              <li>
-                <Link className="active whitefnt" aria-current="page" to="/createBand">Create a Band</Link>
+              <li className="navbar-link">
+                <Link className="whitefnt" aria-current="page" to="/createBand">Create a Band</Link>
               </li>
-              <li>
-                <Link className="active whitefnt" aria-current="page" to="/genres">Add Genre</Link>
+              <li className="navbar-link">
+                <Link className="whitefnt" aria-current="page" to="/genres">Add Genre</Link>
               </li>
-              <li>
-                <Link className='active whitefnt' aria-current="page" to="/instruments">Add Instrument</Link>
+              <li className="navbar-link">
+                <Link className='whitefnt' aria-current="page" to="/instruments">Add Instrument</Link>
               </li>
-              <li>
-                <Link className="active whitefnt" aria-current="page" to="/changePassword">Change Password</Link>
+              <li className="navbar-link">
+                <Link className="whitefnt" aria-current="page" to="/changePassword">Change Password</Link>
               </li>
-              <li>
-                <Link className="active whitefnt" aria-current="page" to="/" onClick={handleLogout}>Log Out</Link>
+              <li className="navbar-link">
+                <Link className="whitefnt" aria-current="page" to="/" onClick={handleLogout}>Log Out</Link>
               </li>
               </ul>
           </div>

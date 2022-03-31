@@ -7,8 +7,13 @@
 }
 
 @font-face {
-    font-family: Pacifico;
-    src: url(../public/assets/Pacifico-Regular.ttf);
+  font-family: Pacifico;
+  src: url(../public/assets/Pacifico-Regular.ttf);
+}
+
+@font-face {
+  font-family: ASAP;
+  src: url(../public/assets/Asap-VariableFont_wght.ttf);
 }
 
 .App {
@@ -19,6 +24,41 @@
   font-family: Pacifico;
 }
 
+.asap { 
+  font-family: ASAP;
+}
+
+.inputs {
+  width: 45vw;
+  height: 4vh;
+  text-align: left;
+  font-size: 1.1rem;
+  margin-right: 1.5vw;
+}
+
+.labels {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px var(--white) solid;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 10%;
+  font-size: 1.2rem;
+}
+
+
+
+.fn-btn {
+  color: var(--white);
+}
+
+
 body {
   height: 100vh;
   width: 100vw;
@@ -28,8 +68,8 @@ td {
   text-align: left;
 }
 
-select {
-  max-width: 40vw;
+.mw-60 {
+  max-width: 60vw;
 }
 
 .blackbg{
@@ -61,6 +101,12 @@ select {
   font-weight: bold;
 }
 
+.blackfnt {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .alertfnt {
   color: var(--red);
   text-decoration: none;
@@ -73,6 +119,27 @@ select {
 button:disabled {
   color: var(--red);
   border: 2px var(--red) solid;
+}
+
+.add-button:hover {
+  transition: .5s;
+  background-color: var(--yellow);
+}
+
+.navbar-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1vh;
+  margin: 0;
+  padding: 5vh;
+  border-radius: 10%;
+}
+
+.navbar-link:hover {
+  transition: 1.0s;
+  background-color: var(--white);
+  color: var(--white);
 }
 
 .column-container {
@@ -95,6 +162,11 @@ button:disabled {
   padding: 0;
 }
 
+.item-card {
+  width: 95vw;
+}
+
+
 .border-card {
   margin: 5vw;
 }
@@ -105,11 +177,15 @@ button:disabled {
 }
 
 .center-card {
-  margin: 5vw
+  margin: 5vw;
 }
 
 .margin-top{
-margin: 5vh;
+  margin-top: 5vh;
+}
+
+.margin-btm {
+  margin-bottom: 5vh;
 }
 
 .margin-2 {
