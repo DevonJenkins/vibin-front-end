@@ -29,7 +29,7 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 
 # *Version 1.0.0 (MVP)*
 
-Please note that our app was designed following a mobile first approach with primarily the iPhone 12 Pro screen size in mind. Accessibility is important to us, so we're working hard on accomodating more screen sizes. Feel free to submit a feature request if you notice anything out of place on your device. 
+Please note that our app was designed following a mobile first approach with primarily the iPhone 12 Pro screen size in mind. Accessibility is important to us, so we're working hard on accomodating more screen sizes. Feel free to submit a [feature request](https://github.com/awatersny/vibin-front-end/issues) if you notice anything out of place on your device. 
 
 ## Tags
 (AAG)- As a guest
@@ -101,7 +101,7 @@ Landing page for first time user -
 
 Landing page for logged in user -
 
-![Logged in user's landing page](https://i.imgur.com/pXMd5LP.png)
+![Logged in user's landing page](https://i.imgur.com/3J6i0O3.png)
 
 ---
 
@@ -111,6 +111,6 @@ Landing page for logged in user -
 [Andrew Waterman](https://www.linkedin.com/in/awatersny/) for the logo design
 
 
-[Dave Collis](https://github.com/dcollis92#technologies--tools) for the readme badges. 
+[Dave Collis](https://github.com/dcollis92#technologies--tools) for the readme badges
 
 
