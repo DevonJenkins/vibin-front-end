@@ -4,7 +4,7 @@ import * as profileService from '../../services/profileService'
 import NavBar from '../../components/NavBar/NavBar'
 import AddInstrumentToProfile from '../../components/AddInstrumentToProfile/AddInstrumenttoProfile'
 
-const Profiles = (user, handleLogout) => {
+const Profiles = ({ user, handleLogout }) => {
   const [profiles, setProfiles] = useState([])
 
   useEffect(()=> {
