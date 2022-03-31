@@ -6,12 +6,32 @@ import AddInstrumentToProfile from '../../components/AddInstrumentToProfile/AddI
 import AddGenreToProfile from '../../components/AddGenreToProfile/AddGenreToProfile'
 
 const MyProfile = (props) => {
-  const [profile, setProfile] = useState([])
+  const [profile, setProfile] = useState({})
 
   useEffect(()=> {
     profileService.getProfile(props.user.profile)
     .then(profileData => setProfile(profileData))
   }, [])
+
+  const handleDeleteInstrument = (profileId, instrumentId ) => {
+    profileService.deleteInstrument(profileId, instrumentId)
+    .then(updatedProfile => {
+      console.log(updatedProfile)
+      setProfile(updatedProfile)
+    })
+  }
+
+  const handleAddInstrument = (profileId, instrumentId) => {
+    profileService.addInstrumentToProfile(profileId, instrumentId)
+    .then(updatedProfile => {
+      console.log(updatedProfile)
+      setProfile(updatedProfile)
+    })
+  }
+
+  const handleDeleteGenre = (profileId, genreId) => {
+    profileService.deleteGenre(profileId, genreId)
+  }
 
   return (
     <>
@@ -23,11 +43,13 @@ const MyProfile = (props) => {
         <div className='margin-2
             edge-card column-container bluebg'>
           <div className='card-body'>
-            <h1 className='whitefnt asap margin-top'>{profile.name}</h1>
-            <ProfileDetails profile={profile} />
+            <h1 className='whitefnt asap margin-top'>{profile?.name}</h1>
+            <ProfileDetails profile={profile} handleDeleteInstrument={handleDeleteInstrument} handleDeleteGenre={handleDeleteGenre} />
             <AddInstrumentToProfile 
             profileId={props.user.profile}
-            getAllInstruments={props.getAllInstruments} />
+            getAllInstruments={props.getAllInstruments}
+            handleAddInstrument={handleAddInstrument}
+            />
             <AddGenreToProfile 
             profileId={props.user.profile}
             />

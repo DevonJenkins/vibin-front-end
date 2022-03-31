@@ -1,33 +1,26 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
 
-const ProfileDetails = (props ) => {
-  const [profile, setProfile] = useState([])
+const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) => {
   const [instrumentData, setInstrumentData] = useState([])
   const [genreData, setGenreData] = useState([])
   const [reviewData, setReviewData] = useState([])
-  const imageUrl = props.profile.photo ? props.profile.photo : 'https://i0.wp.com/sbcf.fr/wp-content/uploads/2018/03/sbcf-default-avatar.png?w=300&ssl=1'
+  const imageUrl = profile?.photo ? profile.photo : 'https://i0.wp.com/sbcf.fr/wp-content/uploads/2018/03/sbcf-default-avatar.png?w=300&ssl=1'
 
   useEffect(() => {
-    profileService.getProfile(props.profile._id)
-    .then(profileData => {
-      setProfile(profileData)
-      setInstrumentData(profileData.instruments)
-      setGenreData(profileData.genres)
-    })
-  }, [props.profile._id])
+    if(profile?.name){
+      setInstrumentData(profile.instruments)
+      setGenreData(profile.genres)
+    }
+  }, [profile])
+  
 
-  const handleDeleteInstrument = (profileId, instrumentId ) => {
-    profileService.deleteInstrument(profileId, instrumentId)
-  }
 
-  const handleDeleteGenre = (profileId, genreId) => {
-    profileService.deleteGenre(profileId, genreId)
-  }
+  // console.log(props.profile.instruments)
   
   return ( 
     <div className='margin-2 column-container bluebg'id='profile-card' >
-      <img src={imageUrl} alt={props.profile.photo} height={250} width={250} className='margin-2 card-top' />
+      <img src={imageUrl} alt="profile-photo" height={250} width={250} className='margin-2 card-top' />
       <details className='margin-2 card-body' >
         <summary className='whitefnt asap summary'>Profile Details</summary>
         <table className="whitefnt">
@@ -36,19 +29,19 @@ const ProfileDetails = (props ) => {
               <td> 
                 <p>Email:</p> 
               </td>
-              <td><p> {profile.email} </p></td>
+              <td><p> {profile?.email} </p></td>
             </tr>
             <tr>
               <td> 
                 <p>Zip: </p>
               </td>
-              <td> <p>{profile.zip}</p></td>
+              <td> <p>{profile?.zip}</p></td>
             </tr>
           </tbody>
         </table>
-          {profile.bio ? 
+          {profile?.bio ? 
           <div className='card bluebg'>
-          <p className='whitefnt'>{profile.bio}</p>
+          <p className='whitefnt'>{profile?.bio}</p>
           </div>
           :
           ""
@@ -58,13 +51,13 @@ const ProfileDetails = (props ) => {
             {instrumentData ? 
             <>
               {instrumentData.map((instrument, idx) => 
-                <>
-                  <p key={idx}>{instrument.name}</p>
+                <React.Fragment key={idx}>
+                  <p>{instrument.name}</p>
                   <button 
                     className='btn btn-danger' 
                     onClick={() => handleDeleteInstrument(profile._id, instrument._id)}
                   >Delete</button>
-                </>
+                </React.Fragment>
               )}
             </>
             :
@@ -78,13 +71,13 @@ const ProfileDetails = (props ) => {
             {genreData ?
             <>
               {genreData.map((genre, idx) => 
-              <>
-                <p key={idx}>{genre.name}</p>
+              <React.Fragment key={idx}>
+                <p>{genre.name}</p>
                 <button 
                     className='btn btn-danger' 
                     onClick={() => handleDeleteGenre(profile._id, genre._id)}
                   >Delete</button>
-              </>
+              </React.Fragment>
               )}
             </>
             :

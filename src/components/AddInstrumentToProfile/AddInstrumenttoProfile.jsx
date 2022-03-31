@@ -26,11 +26,7 @@ const AddInstrumentToProfile = (props) => {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-    try{
-      profileService.addInstrumentToProfile(formData, props.profileId)
-      }catch (err){
-      console.log('Error:', err)
-    }
+    props.handleAddInstrument(props.profileId, formData.id)
   }
 
   return ( 
