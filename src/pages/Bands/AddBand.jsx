@@ -63,15 +63,15 @@ const AddBand = ({ user, handleLogout }) => {
   }
 
   const handlePushGenre = evt => {
-    if(genreId) setFormData({...formData, ['genres']: [...formData.genres, genreId]})
+    if(genreId) setFormData({...formData, genres: [...formData.genres, genreId]})
   }
   
   const handlePushInstrument = evt => {
-    if(instrumentId) setFormData({...formData, ['instruments']: [...formData.instruments, instrumentId]})
+    if(instrumentId) setFormData({...formData, instruments: [...formData.instruments, instrumentId]})
   }
 
   const handlePushMember = evt => {
-    if(memberId) setFormData({...formData, ['members']: [...formData.members, memberId]})
+    if(memberId) setFormData({...formData, members: [...formData.members, memberId]})
   }
 
   useEffect(() => {
