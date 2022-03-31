@@ -20,13 +20,14 @@ const Landing = ({ user, handleLogout }) => {
           </div>
         </>
         :
-        <div className='card edge-card column-container bluebg'>
+        <div className='card edge-card column-container svgbg'>
           <div className='card landing-logo center-card whitebg'>
-            <img src="../../assets/landing-logo.png" alt="vibin-logo"/>
-            <h6>When the vibe needs to change...</h6>
+            <img src="../../assets/landing-logo.png" alt="vibin-logo" width={300}/>
           </div>
-            <h6 className='whitefnt'>Welcome to Vibin!</h6>
-            <p className='margin-2 whitefnt'>At Vibin we're trying to get you into a band with the best vibe possible! Lets get you started! </p>
+          <div className='flex-start left-text'>
+            <h6 className='whitefnt asap'>When the vibe needs to change...</h6>
+            <p className='whitefnt asap'>At Vibin we're trying to get you <br/> into a band with the best vibe possible! <br/> Lets get you started! </p>
+          </div>
           <div className='row-container'>
             <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'>
               <Link className='whitefnt' to="/login">Log In</Link>

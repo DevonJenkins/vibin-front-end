@@ -3,7 +3,7 @@
   --red: #ff0000;
   --blue: #3185fc;
   --yellow: #ffc100;
-  --white: #edf2f4;
+  --white: rgb(237, 242, 244);
 }
 
 @font-face {
@@ -84,9 +84,27 @@ td {
   background-color: var(--blue);
 }
 
+.left-text {
+  text-align: left;
+}
+
+.flex-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 2vw;
+}
+
+.svgbg{
+  background: url(../public/assets/1615718209retro-colors-abstract-shape.svg) no-repeat ;
+  background-color: var(--blue);
+
+}
+
 .whitebg{
   background-color: var(--white);
 }
+
 .yellowbg{
   background-color: var(--yellow);
 }
@@ -99,6 +117,7 @@ td {
   color: var(--white);
   text-decoration: none;
   font-weight: bold;
+  text-shadow: 2px 2px 0 var(--black);
 }
 
 .blackfnt {
@@ -134,6 +153,7 @@ button:disabled {
   margin: 0;
   padding: 5vh;
   border-radius: 10%;
+  font-size: 1.5rem;
 }
 
 .navbar-link:hover {
@@ -152,7 +172,8 @@ button:disabled {
 .row-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  width: 95vw;
+  justify-content: center;
   align-items: center;
 }
 
@@ -200,7 +221,10 @@ button:disabled {
 }
 
 .landing-logo {
-  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80vw;
 }
 
 #profile-card{
