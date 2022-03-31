@@ -95,8 +95,12 @@ const App = () => {
         />
         <Route 
         path="/joinBand"
-        element={ <JoinBand/>  }
+        element={
+          user ? <JoinBand user={user}  
+        handleLogout={handleLogout}
+        navigate={navigate}/> : <Navigate to="/login" />}
         />
+
         <Route
           path="/createBand"
           element={

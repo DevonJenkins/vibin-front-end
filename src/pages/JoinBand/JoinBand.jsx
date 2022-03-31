@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import NavBar from '../../components/NavBar/NavBar'
 
-const JoinBand = ({ user, handleLogout, Bands }) => {
+const JoinBand = ({ user, handleLogout }) => {
   return (  
     <>
     <NavBar user={user} handleLogout={handleLogout} />
@@ -10,15 +10,10 @@ const JoinBand = ({ user, handleLogout, Bands }) => {
       
       <div className='card edge-card column-container bluebg'>
         <div className='card landing-logo center-card whitebg'>
-          <h1>
-            User Info 
-            <br />
-            go suck a lemon
-          </h1>
           <h1>Parameter selection</h1>
 
-          {Bands? 
-            <div>
+          {user ? 
+            <div className='card'>
               <h3>There Are Bands!</h3>
             </div>
             // map bands based on genre
@@ -67,5 +62,5 @@ const JoinBand = ({ user, handleLogout, Bands }) => {
     </>
   );
 }
- 
+
 export default JoinBand;
