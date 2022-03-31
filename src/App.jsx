@@ -99,7 +99,12 @@ const App = () => {
         />
         <Route
           path="/createBand"
-          element={user ? <AddBand /> : <Navigate to="/bands" />}
+          element={
+            user ? <AddBand
+              user={user}  
+              handleLogout={handleLogout}
+              navigate={navigate}
+            /> : <Navigate to="/login" />}
         />
       </Routes>
     </>
