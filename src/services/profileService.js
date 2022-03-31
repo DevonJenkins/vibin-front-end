@@ -18,20 +18,18 @@ function getProfile(id) {
   .then(res => res.json())
 }
 
-function addInstrumentToProfile(instrumentId, profileId) {
+function addInstrumentToProfile(profileId, instrumentId) {
   console.log(instrumentId)
-  return fetch(`${BASE_URL}/${profileId}/instruments`, {
+  return fetch(`${BASE_URL}/${profileId}/instruments/${instrumentId}`, {
     method:'PATCH',
     headers: new Headers({ 
-      'Content-Type': 'application/json',
       Authorization: `Bearer ${tokenService.getToken()}`
     }),
-    body: JSON.stringify(instrumentId),
   })
   .then(res => res.json())
 }
 
-function addGenreToProfile(genreId, profileId) {
+function addGenreToProfile(profileId, genreId) {
   return fetch(`${BASE_URL}/${profileId}/genres`, {
     method:'PATCH',
     headers: new Headers({ 
@@ -50,7 +48,7 @@ function deleteInstrument(profileId, instrumentId) {
       Authorization: `Bearer ${tokenService.getToken()}`
     }),
   })
-  .then(res => console.log(res.json()))
+  .then(res => res.json())
 }
 
 function deleteGenre(profileId, genreId) {
