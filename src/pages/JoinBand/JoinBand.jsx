@@ -6,15 +6,15 @@ const JoinBand = ({ user, handleLogout }) => {
     <>
     <NavBar user={user} handleLogout={handleLogout} />
 
-    <main className='card full-page-card column-container whitebg'>
+    <main className='card full-page-card column-container whitebg margin-top'>
       
       <div className='card edge-card column-container bluebg'>
         <div className='card landing-logo center-card whitebg'>
-          <h1>Parameter selection</h1>
+          <img src="..//assets/bad-note.png" alt="in-progress-image" />
 
           {user ? 
             <div className='card'>
-              <h3>There Are Bands!</h3>
+              <h3 className='pacifico'>Sorry!</h3>
             </div>
             // map bands based on genre
             //if band.genre && band.genre.tag == profile.genre && profile genre.tag then map the band to a card 
@@ -51,11 +51,15 @@ const JoinBand = ({ user, handleLogout }) => {
               //if not user then direct to the signup page
 
           :
-            <h3>No Bands added yet</h3>
+            <h3>Nothing Here Yet!</h3>
           }
 
         </div>
-          <h6 className='whitefnt'>This page will help the user find a band</h6>
+          <h4 className='whitefnt asap'>We're Still Finding Our Sound Here!</h4>
+          <p className='whitefnt asap'>Come back when we've done some more <br/> fine-tuning!</p>
+          <div className=' card margin-2  br-5 padding-2 whitebrdr card blackbg asap'>
+            <Link className='whitefnt' to='/'>Back</Link>
+          </div>
       </div>
     
     </main>

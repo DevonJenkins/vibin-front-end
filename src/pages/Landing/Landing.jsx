@@ -4,19 +4,19 @@ import NavBar from '../../components/NavBar/NavBar'
 const Landing = ({ user, handleLogout }) => {
 
     return (
-    <main className='card full-page-card column-container whitebg'>
+    <main className='card full-page-card column-container whitebg margin-top'>
       {user ? 
         <>
           <NavBar user={user} handleLogout={handleLogout} />
-          <div className='card edge-card column-container bluebg'>
+          <div className='card edge-card column-container svgbg'>
             <h1 className='whitefnt pacifico '>Welcome back to Vibin!</h1>
             <div className='mw-60 margin-btm margin-2'>
               <p className='whitefnt asap'>Select one of the options below to get started! </p>
             </div>
             {/* ==-- Add paths when they've been created --== */}
-            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/createBand">Start a Band</Link></div>
-            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/joinBand">Join a Band</Link></div>
-            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'><Link className='whitefnt' to="/profiles">View Profiles</Link></div>
+            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg asap'><Link className='whitefnt' to="/createBand">Start a Band</Link></div>
+            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg asap'><Link className='whitefnt' to="/joinBand">Join a Band</Link></div>
+            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg asap'><Link className='whitefnt' to="/profiles">View Profiles</Link></div>
           </div>
         </>
         :
@@ -29,10 +29,10 @@ const Landing = ({ user, handleLogout }) => {
             <p className='whitefnt asap'>At Vibin we're trying to get you <br/> into a band with the best vibe possible! <br/> Lets get you started! </p>
           </div>
           <div className='row-container'>
-            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'>
+            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg asap'>
               <Link className='whitefnt' to="/login">Log In</Link>
             </div>
-            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg'>
+            <div className='margin-2  br-5 padding-2 whitebrdr card blackbg asap'>
               <Link className='whitefnt' to="/signup">Sign Up</Link>
             </div>
           </div>

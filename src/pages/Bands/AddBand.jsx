@@ -96,7 +96,7 @@ const AddBand = ({ user, handleLogout }) => {
   return ( 
     <main className='card full-page-card column-container whitebg margin-top'>
       <NavBar user={user} handleLogout={handleLogout} />
-      <div className='card edge-card column-container bluebg'>
+      <div className='card edge-card column-container svgbg'>
         <h1 className='whitefnt pacifico margin-btm'>Create a Band</h1>
         <form
           className="asap item-card"

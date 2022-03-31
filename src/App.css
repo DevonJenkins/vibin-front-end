@@ -37,6 +37,7 @@
 }
 
 .labels {
+  padding-left: 4vw;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -118,7 +119,7 @@ td {
   color: var(--white);
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 2px 2px 0 var(--black);
+  text-shadow: 3px 1px 0 var(--black);
 }
 
 .blackfnt {
@@ -164,7 +165,11 @@ button:disabled {
 .navbar-link:hover {
   transition: 1.0s;
   background-color: var(--white);
-  color: var(--white);
+  color: var(--red);
+}
+
+Link:hover{
+  color: var(--red);
 }
 
 .column-container {

@@ -20,7 +20,7 @@ const MyProfile = (props) => {
       <br />
       <br />
       <>
-        <div className='card-body'>
+        <div className='card-body margin-top'>
           <p>{profile.name}</p>
           <ProfileDetails profile={profile} />
           <AddInstrumentToProfile 
