@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import * as instrumentService from '../../services/instrumentService'
-import * as profileService from '../../services/profileService'
 
 
 const AddInstrumentToProfile = (props) => {

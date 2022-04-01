@@ -40,16 +40,11 @@ const App = () => {
 
   const handleAddInstrument = newInstrumentData => {
     instrumentService.create(newInstrumentData)
-    .then(newInstrument => setInstruments([...instrumentService, newInstrument]))
+    .then(newInstrument => setInstruments([...instruments, newInstrument]))
     .then(navigate('/'))
     .catch(err => console.log(err))
   }
 
-  const getAllInstruments = () => {
-    instrumentService.getAllInstruments()
-    .then(allInstrumentData => setInstruments(allInstrumentData))
-    .catch(err => console.log(err))
-  }
 
   return (
     <>
@@ -71,12 +66,12 @@ const App = () => {
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
         <Route
-          path='/myprofile' element={user ? <MyProfile 
+          path='/myprofile' element={user ? 
+                                            <MyProfile 
                                               user={user}
                                               navigate={navigate}
-                                              getAllInstruments={getAllInstruments}
                                               handleLogout={handleLogout}
-                                              /> : <Navigate to="/login" />}
+                                            /> : <Navigate to="/login" />}
         />
         <Route
           path="/profiles"

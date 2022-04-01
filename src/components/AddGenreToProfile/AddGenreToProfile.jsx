@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import * as genreService from '../../services/genreService'
-import * as profileService from '../../services/profileService'
 
 
 const AddGenreToProfile = (props) => {

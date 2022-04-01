@@ -29,8 +29,19 @@ const MyProfile = (props) => {
     })
   }
 
+  const handleAddGenre = (profileId, genreId) => {
+    profileService.addGenreToProfile(profileId, genreId)
+    .then(updatedProfile => {
+      setProfile(updatedProfile)
+    })
+  }
+
   const handleDeleteGenre = (profileId, genreId) => {
     profileService.deleteGenre(profileId, genreId)
+    .then(updatedProfile => {
+      console.log(updatedProfile)
+      setProfile(updatedProfile)
+    })
   }
 
   return (
@@ -44,14 +55,17 @@ const MyProfile = (props) => {
             edge-card column-container svgbg'>
           <div className='card-body'>
             <h1 className='whitefnt asap margin-top name'>{profile?.name}</h1>
-            <ProfileDetails profile={profile} handleDeleteInstrument={handleDeleteInstrument} handleDeleteGenre={handleDeleteGenre} />
+            <ProfileDetails 
+            profile={profile} 
+            handleDeleteInstrument={handleDeleteInstrument} 
+            handleDeleteGenre={handleDeleteGenre} />
             <AddInstrumentToProfile 
             profileId={props.user.profile}
-            getAllInstruments={props.getAllInstruments}
             handleAddInstrument={handleAddInstrument}
             />
             <AddGenreToProfile 
             profileId={props.user.profile}
+            handleAddGenre={handleAddGenre}
             />
           </div>
         </div>

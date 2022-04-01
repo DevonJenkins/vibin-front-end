@@ -44,5 +44,5 @@ return ids.map(id => fetch(`${BASE_URL}/${id}`, {
 export {
   create,
   getAllInstruments,
-   getProfileInstruments
+  getProfileInstruments
 }
