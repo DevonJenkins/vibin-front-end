@@ -48,12 +48,12 @@ const MyProfile = (props) => {
       <br />
       <br />
       <>
-        <div className='margin-2
-            edge-card column-container svgbg'>
+        <div className='margin-2 column-container svgbg'>
           <div className='card-body'>
             <h1 className='whitefnt asap margin-top name'>{profile?.name}</h1>
             <ProfileDetails 
-            profile={profile} 
+            profile={profile}
+            user={props.user}
             handleDeleteInstrument={handleDeleteInstrument} 
             handleDeleteGenre={handleDeleteGenre} />
             <AddInstrumentToProfile 

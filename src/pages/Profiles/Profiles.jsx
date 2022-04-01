@@ -27,7 +27,7 @@ const Profiles = ({ user, handleLogout }) => {
             card column-container profilesbg'>
               <div className='card-body'>
                 <h1 className='whitefnt'>{profile.name}</h1>
-                <ProfileDetails profile={profile} />
+                <ProfileDetails user={user} profile={profile} />
               </div>
             </div>
             )}

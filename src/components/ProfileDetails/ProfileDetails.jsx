@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
 
-const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) => {
+const ProfileDetails = ({profile, user, handleDeleteGenre, handleDeleteInstrument}) => {
   const [instrumentData, setInstrumentData] = useState([])
   const [genreData, setGenreData] = useState([])
   const [reviewData, setReviewData] = useState([])
@@ -54,13 +54,13 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
                   <tbody>
                     <tr>
                       <td> 
-                        <p>{instrument.name}</p>
+                        <div className='list-container'>{instrument.name}</div>
                       </td>
                       <td>
                         <button 
-                          className='btn btn-danger' 
+                          className='asap add-button' 
                           onClick={() => handleDeleteInstrument(profile._id, instrument._id)}
-                        >Delete</button>
+                        >X</button>
                         </td>
                     </tr>
                   </tbody>
@@ -81,17 +81,19 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
             <>
               {genreData.map((genre, idx) => 
               <React.Fragment key={idx}>
-                <table className="whitefnt" cellPadding={5}>
+                <table className="whitefnt" cellPadding={10}>
                   <tbody>
-                    <tr>
-                      <td> 
-                        <p>{genre.name}</p>
+                    <tr >
+                      <td>
+                        <div className='list-container'>{genre.name}</div>
                       </td>
                       <td>
-                        <button 
-                            className='btn btn-danger' 
-                            onClick={() => handleDeleteGenre(profile._id, genre._id)}
-                          >Delete</button>
+                          <div className='list-container'>
+                            <button 
+                              className='asap add-button' 
+                              onClick={() => handleDeleteGenre(profile._id, genre._id)}
+                            >X</button>
+                          </div>
                       </td>
                     </tr>
                   </tbody>
