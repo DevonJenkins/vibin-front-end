@@ -19,7 +19,6 @@ function getProfile(id) {
 }
 
 function addInstrumentToProfile(profileId, instrumentId) {
-  console.log(instrumentId)
   return fetch(`${BASE_URL}/${profileId}/instruments/${instrumentId}`, {
     method:'PATCH',
     headers: new Headers({ 

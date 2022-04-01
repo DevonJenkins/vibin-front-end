@@ -30,19 +30,10 @@ return ids.map(id => fetch(`${BASE_URL}/${id}`, {
       Authorization: `Bearer ${tokenService.getToken()}` 
     }),
   }))
-  // console.log(instruments)
-  // const instrumentObjects = Promise.all(instruments)
-  // console.log(instrumentObjects) 
-  // return instrumentObjects
-
-  
-  //  .then(res => res.json())
-
-  //  try mapping in front end
 }
 
 export {
   create,
   getAllInstruments,
-  getProfileInstruments
+  getProfileInstruments,
 }
