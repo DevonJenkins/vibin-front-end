@@ -47,16 +47,27 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
           ""
           }
           <details>
-            <summary>Instruments</summary>
+            <summary className='whitefnt asap summary'>Instruments</summary>
             {instrumentData ? 
             <>
               {instrumentData.map((instrument, idx) => 
                 <React.Fragment key={idx}>
-                  <p>{instrument.name}</p>
-                  <button 
-                    className='btn btn-danger' 
-                    onClick={() => handleDeleteInstrument(profile._id, instrument._id)}
-                  >Delete</button>
+                  <table className="whitefnt" cellPadding={5}>
+                  <tbody>
+                    <tr>
+                      <td> 
+                        <p>{instrument.name}</p>
+                      </td>
+                      <td>
+                        <button 
+                          className='btn btn-danger' 
+                          onClick={() => handleDeleteInstrument(profile._id, instrument._id)}
+                        >Delete</button>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+                  
                 </React.Fragment>
               )}
             </>
@@ -67,16 +78,26 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
             }
           </details>
           <details>
-            <summary>Genres</summary>
+            <summary className='whitefnt asap summary'>Genres</summary>
             {genreData ?
             <>
               {genreData.map((genre, idx) => 
               <React.Fragment key={idx}>
-                <p>{genre.name}</p>
-                <button 
-                    className='btn btn-danger' 
-                    onClick={() => handleDeleteGenre(profile._id, genre._id)}
-                  >Delete</button>
+                <table className="whitefnt" cellPadding={5}>
+                  <tbody>
+                    <tr>
+                      <td> 
+                        <p>{genre.name}</p>
+                      </td>
+                      <td>
+                        <button 
+                            className='btn btn-danger' 
+                            onClick={() => handleDeleteGenre(profile._id, genre._id)}
+                          >Delete</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </React.Fragment>
               )}
             </>
