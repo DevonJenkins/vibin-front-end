@@ -16,7 +16,6 @@ const MyProfile = (props) => {
   const handleDeleteInstrument = (profileId, instrumentId ) => {
     profileService.deleteInstrument(profileId, instrumentId)
     .then(updatedProfile => {
-      console.log(updatedProfile)
       setProfile(updatedProfile)
     })
   }
@@ -24,7 +23,6 @@ const MyProfile = (props) => {
   const handleAddInstrument = (profileId, instrumentId) => {
     profileService.addInstrumentToProfile(profileId, instrumentId)
     .then(updatedProfile => {
-      console.log(updatedProfile)
       setProfile(updatedProfile)
     })
   }
@@ -39,7 +37,6 @@ const MyProfile = (props) => {
   const handleDeleteGenre = (profileId, genreId) => {
     profileService.deleteGenre(profileId, genreId)
     .then(updatedProfile => {
-      console.log(updatedProfile)
       setProfile(updatedProfile)
     })
   }
