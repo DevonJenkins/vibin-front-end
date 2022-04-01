@@ -29,12 +29,14 @@ Click [here](https://trello.com/b/URF0LvH4/unit-3-project) to view our planning 
 
 # *Version 1.0.0 (MVP)*
 
-Please note that our app was designed following a mobile first approach with primarily the iPhone 12 Pro screen size in mind. Accessibility is important to us, so we're working hard on accomodating more screen sizes. Feel free to submit a feature request if you notice anything out of place on your device. 
+Please note that our app was designed following a mobile first approach with primarily the iPhone 12 Pro screen size in mind. Accessibility is important to us, so we're working hard on accomodating more screen sizes. Feel free to submit a [feature request](https://github.com/awatersny/vibin-front-end/issues) if you notice anything out of place on your device. 
 
 ## Tags
 (AAG)- As a guest
 
 (AAU)- As a user
+
+(AAA)- As an admin
 
 (AAU-BO)- As a user/band owner
 
@@ -62,7 +64,7 @@ Please note that our app was designed following a mobile first approach with pri
 - [ ] AAU I want to be able to swipe on bands/bandmembers so that the matching buttons don't take up room on the UI.
 - [ ] AAU I want the ability to send and recieve audio and video files for auditioning purposes. 
 - [ ] AAU I want geolocation features so that I can find users who are within a certain mileage radius.
-- [ ] AAU-BO I want to be able to access the features of Dave Collis's [Awful Band Names](https://awful-bandnames.herokuapp.com/bandnames) app so that I can get some insight and have some fun coming up with a new  and potentially silly bandnames. 
+- [ ] AAU-BO I want to be able to access the features of Dave Collis's [Awful Band Names](https://awful-bandnames.herokuapp.com/bandnames) app so that I can get some insight and have some fun coming up with new bandnames. 
 
 ---
 
@@ -101,7 +103,7 @@ Landing page for first time user -
 
 Landing page for logged in user -
 
-![Logged in user's landing page](https://i.imgur.com/pXMd5LP.png)
+![Logged in user's landing page](https://i.imgur.com/3J6i0O3.png)
 
 ---
 
@@ -111,6 +113,6 @@ Landing page for logged in user -
 [Andrew Waterman](https://www.linkedin.com/in/awatersny/) for the logo design
 
 
-[Dave Collis](https://github.com/dcollis92#technologies--tools) for the readme badges. 
+[Dave Collis](https://github.com/dcollis92#technologies--tools) for the readme badges
 
 
