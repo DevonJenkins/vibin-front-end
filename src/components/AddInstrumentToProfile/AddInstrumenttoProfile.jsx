@@ -13,7 +13,6 @@ const AddInstrumentToProfile = (props) => {
       instrumentService.getAllInstruments()
     .then(instrumentsData => {
       setInstruments(instrumentsData)
-      //Experimenting here-- trying to get the first instrument in the select form to occupy state
       setFormData({id: instrumentsData[0]._id})
     })
   },[])

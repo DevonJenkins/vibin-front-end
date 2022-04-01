@@ -3,7 +3,7 @@ import * as genreService from '../../services/genreService'
 import * as profileService from '../../services/profileService'
 
 
-const AddInstrumentToProfile = (props) => {
+const AddGenreToProfile = (props) => {
   const [genres, setGenres] = useState([])
   const [formData, setFormData] = useState({
     id: '',
@@ -25,11 +25,7 @@ const AddInstrumentToProfile = (props) => {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-    try{
-      profileService.addGenreToProfile(formData, props.profileId)
-      }catch (err){
-      console.log('Error:', err)
-    }
+    props.handleAddGenre(props.profileId, formData.id)
   }
 
   return ( 
@@ -74,4 +70,4 @@ const AddInstrumentToProfile = (props) => {
   );
 }
 
-export default AddInstrumentToProfile
+export default AddGenreToProfile
