@@ -204,6 +204,13 @@ Link:hover{
   align-items: center;
 }
 
+.list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .full-page-card {
   height: 100vh;
   width: 100vw;
