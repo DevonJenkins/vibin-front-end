@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import * as instrumentService from '../../services/instrumentService'
-import * as profileService from '../../services/profileService'
 
 
 const AddInstrumentToProfile = (props) => {
@@ -13,7 +12,6 @@ const AddInstrumentToProfile = (props) => {
       instrumentService.getAllInstruments()
     .then(instrumentsData => {
       setInstruments(instrumentsData)
-      //Experimenting here-- trying to get the first instrument in the select form to occupy state
       setFormData({id: instrumentsData[0]._id})
     })
   },[])
@@ -31,18 +29,18 @@ const AddInstrumentToProfile = (props) => {
 
   return ( 
     <>
-      <div className='card'>
+      <div className='margin-top'>
         <details className='margin-2'>
-          <summary>Add An Instrument</summary>
-          <form className='row-container' autoComplete='off' onSubmit={handleSubmit}>
+          <summary className='whitefnt asap summary'>Add An Instrument</summary>
+          <form  autoComplete='off' onSubmit={handleSubmit}>
             <table cellPadding={5}>
               <tbody>
                 <tr>
                   <td>
                     <select
                     id='instrument-select'
-                    // autoComplete='off'
-                    className="asap inputs"
+                    autoComplete='off'
+                    className="inputs asap"
                     name='id'
                     value={id}
                     onChange={handleChange}
@@ -59,7 +57,7 @@ const AddInstrumentToProfile = (props) => {
                     <button
                     type='submit'
                     className='margin-2 br padding-2 whitebrdr whitefnt blackbg'
-                    >Add</button>
+                    >+</button>
                   </td>
                 </tr>
               </tbody>

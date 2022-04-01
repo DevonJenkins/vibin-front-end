@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import * as genreService from '../../services/genreService'
-import * as profileService from '../../services/profileService'
 
 
-const AddInstrumentToProfile = (props) => {
+const AddGenreToProfile = (props) => {
   const [genres, setGenres] = useState([])
   const [formData, setFormData] = useState({
     id: '',
@@ -25,19 +24,15 @@ const AddInstrumentToProfile = (props) => {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-    try{
-      profileService.addGenreToProfile(formData, props.profileId)
-      }catch (err){
-      console.log('Error:', err)
-    }
+    props.handleAddGenre(props.profileId, formData.id)
   }
 
   return ( 
     <>
-      <div className='card'>
+      <div>
         <details className='margin-2'>
-          <summary>Add A Genre</summary>
-          <form className='row-container' autoComplete='off' onSubmit={handleSubmit}>
+          <summary className='whitefnt asap summary'>Add A Genre</summary>
+          <form autoComplete='off' onSubmit={handleSubmit}>
             <table cellPadding={5}>
               <tbody>
                 <tr>
@@ -45,6 +40,7 @@ const AddInstrumentToProfile = (props) => {
                     <select
                     id='instrument-select'
                     autoComplete='off'
+                    className='inputs asap'
                     name='id'
                     value={id}
                     onChange={handleChange}
@@ -61,7 +57,7 @@ const AddInstrumentToProfile = (props) => {
                     <button
                     type='submit'
                     className='margin-2 br padding-2 whitebrdr whitefnt blackbg'
-                    >Add</button>
+                    >+</button>
                   </td>
                 </tr>
               </tbody>
@@ -73,4 +69,4 @@ const AddInstrumentToProfile = (props) => {
   );
 }
 
-export default AddInstrumentToProfile
+export default AddGenreToProfile
