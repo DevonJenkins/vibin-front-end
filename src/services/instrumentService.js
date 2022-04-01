@@ -30,9 +30,10 @@ return ids.map(id => fetch(`${BASE_URL}/${id}`, {
       Authorization: `Bearer ${tokenService.getToken()}` 
     }),
   }))
+}
 
 export {
   create,
   getAllInstruments,
-  getProfileInstruments
+  getProfileInstruments,
 }
