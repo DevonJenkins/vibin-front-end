@@ -58,6 +58,14 @@
   font-size: 1.2rem;
 }
 
+.name{
+  font-size: 3.0rem;
+}
+
+.box-shadow{
+  box-shadow: 10px 10px rgba(0,0,0,.4);
+  border: var(--white) 5px solid;
+}
 
 
 .fn-btn {

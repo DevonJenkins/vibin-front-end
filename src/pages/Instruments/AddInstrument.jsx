@@ -36,17 +36,18 @@ const AddInstrument = props => {
     <>
       <NavBar user={props.user} handleLogout={props.handleLogout} />
       <main className='card full-page-card column-container whitebg margin-top'>
-        <h1 className="whitefnt">Add an Instrument</h1>
         <form autoComplete='off' onSubmit={handleSubmit}>
           <div className='card edge-card column-container bluebg'>
+            <h1 className="whitefnt pacifico margin-btm">Add an Instrument</h1>
             <div>
                 <table cellPadding={5}>
                   <tbody>
                     <tr>
-                      <td className='whitefnt'>Name</td>
+                      <td className='whitefnt labels asap'>Name</td>
                       <td>
                         <input
                           type='text'
+                          className='inputs asap'
                           id='name-input'
                           name='name'
                           value={name}
@@ -56,10 +57,11 @@ const AddInstrument = props => {
                       </td>
                     </tr>
                     <tr>
-                      <td className='whitefnt'>Tag</td>
+                      <td className='whitefnt labels asap'>Tag</td>
                       <td>
                         <select 
                         id='tag-select'
+                        className='inputs asap'
                         autoComplete='off'
                         name='tag'
                         value={tag}

@@ -19,7 +19,7 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
   // console.log(props.profile.instruments)
   
   return ( 
-    <div className='margin-2 column-container bluebg'id='profile-card' >
+    <div className='margin-2 column-container bluebg box-shadow'id='profile-card' >
       <img src={imageUrl} alt="profile-photo" height={250} width={250} className='margin-2 card-top' />
       <details className='margin-2 card-body' >
         <summary className='whitefnt asap summary'>Profile Details</summary>

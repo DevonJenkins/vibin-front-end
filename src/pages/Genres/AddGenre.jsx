@@ -39,18 +39,18 @@ const AddGenre = props => {
     <>
       <NavBar user={props.user} handleLogout={props.handleLogout} />
       <main className='card full-page-card column-container whitebg margin-top'>
-        <h1 className="whitefnt">Add a Genre</h1>
         <form autoComplete='off' ref={formElement} onSubmit={handleSubmit}>
           <div className='card edge-card column-container bluebg'>
+            <h1 className="whitefnt margin-btm pacifico">Add a Genre</h1>
             <div>
                 <table cellPadding={5}>
                   <tbody>
                     <tr>
-                      <td className='whitefnt'>Name</td>
+                      <td className='whitefnt labels asap'>Name</td>
                       <td>
                         <input
                           type='text'
-                          className='form-control'
+                          className='form-control inputs'
                           id='name-input'
                           name='name'
                           value={formData.name}
@@ -60,11 +60,11 @@ const AddGenre = props => {
                       </td>
                     </tr>
                     <tr>
-                      <td className='whitefnt'>Tag</td>
+                      <td className='whitefnt labels asap'>Tag</td>
                       <td>
                         <input
                           type='text'
-                          className='form-control'
+                          className='form-control inputs asap'
                           id='tag-input'
                           name='tag'
                           value={formData.tag}

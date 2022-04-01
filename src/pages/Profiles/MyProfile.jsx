@@ -41,9 +41,9 @@ const MyProfile = (props) => {
       <br />
       <>
         <div className='margin-2
-            edge-card column-container bluebg'>
+            edge-card column-container svgbg'>
           <div className='card-body'>
-            <h1 className='whitefnt asap margin-top'>{profile?.name}</h1>
+            <h1 className='whitefnt asap margin-top name'>{profile?.name}</h1>
             <ProfileDetails profile={profile} handleDeleteInstrument={handleDeleteInstrument} handleDeleteGenre={handleDeleteGenre} />
             <AddInstrumentToProfile 
             profileId={props.user.profile}
