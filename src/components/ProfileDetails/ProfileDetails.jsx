@@ -15,8 +15,6 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
   }, [profile])
   
 
-
-  // console.log(props.profile.instruments)
   
   return ( 
     <div className='margin-2 column-container bluebg box-shadow'id='profile-card' >
@@ -73,7 +71,7 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
             </>
             :
             <>
-              <p>No Instruments Yet</p>
+              <p className='whitefnt'>No Instruments Yet</p>
             </>
             }
           </details>
@@ -103,7 +101,7 @@ const ProfileDetails = ({profile, handleDeleteGenre, handleDeleteInstrument}) =>
             </>
             :
             <>
-              <p>No Genres Yet</p>
+              <p className='whitefnt'>No Genres Yet</p>
             </>
             }
           </details>

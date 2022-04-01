@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import * as instrumentService from '../../services/instrumentService'
-import * as profileService from '../../services/profileService'
 
 
 const AddInstrumentToProfile = (props) => {
@@ -13,7 +12,6 @@ const AddInstrumentToProfile = (props) => {
       instrumentService.getAllInstruments()
     .then(instrumentsData => {
       setInstruments(instrumentsData)
-      //Experimenting here-- trying to get the first instrument in the select form to occupy state
       setFormData({id: instrumentsData[0]._id})
     })
   },[])

@@ -30,13 +30,11 @@ function addInstrumentToProfile(profileId, instrumentId) {
 }
 
 function addGenreToProfile(profileId, genreId) {
-  return fetch(`${BASE_URL}/${profileId}/genres`, {
+  return fetch(`${BASE_URL}/${profileId}/genres/${genreId}`, {
     method:'PATCH',
     headers: new Headers({ 
-      'Content-Type': 'application/json',
       Authorization: `Bearer ${tokenService.getToken()}`
     }),
-    body: JSON.stringify(genreId),
   })
   .then(res => res.json())
 }
