@@ -62,7 +62,7 @@ const AddInstrumentToProfile = (props) => {
                     <button
                     type='submit'
                     className='margin-2 br padding-2 whitebrdr whitefnt blackbg'
-                    >Add</button>
+                    >+</button>
                   </td>
                 </tr>
               </tbody>

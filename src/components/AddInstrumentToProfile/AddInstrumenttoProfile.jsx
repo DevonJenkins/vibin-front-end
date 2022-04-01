@@ -31,7 +31,7 @@ const AddInstrumentToProfile = (props) => {
 
   return ( 
     <>
-      <div>
+      <div className='margin-top'>
         <details className='margin-2'>
           <summary className='whitefnt asap summary'>Add An Instrument</summary>
           <form  autoComplete='off' onSubmit={handleSubmit}>
@@ -59,7 +59,7 @@ const AddInstrumentToProfile = (props) => {
                     <button
                     type='submit'
                     className='margin-2 br padding-2 whitebrdr whitefnt blackbg'
-                    >Add</button>
+                    >+</button>
                   </td>
                 </tr>
               </tbody>
